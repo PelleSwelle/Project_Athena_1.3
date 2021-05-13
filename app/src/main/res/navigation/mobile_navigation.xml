@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.projectathena13.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"
+    />
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.projectathena13.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard"
+    />
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_gallery"-->
+<!--        android:name="com.example.projectathena13.ui.gallery.GalleryFragment"-->
+<!--        android:label="@string/menu_gallery"-->
+<!--        tools:layout="@layout/fragment_gallery"-->
+<!--    />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_slideshow"-->
+<!--        android:name="com.example.projectathena13.ui.slideshow.SlideshowFragment"-->
+<!--        android:label="@string/menu_slideshow"-->
+<!--        tools:layout="@layout/fragment_slideshow"-->
+<!--    />-->
+    <fragment
+        android:id="@+id/nav_achievements"
+        android:name="com.example.projectathena13.ui.achievements.AchievementsFragment"
+        android:label="Achievements"
+        tools:layout="@layout/fragment_achievements"
+    />
+
+    <fragment
+            android:id="@+id/nav_city"
+            android:name="com.example.projectathena13.ui.city.CityFragment"
+            android:label="City"
+            tools:layout="@layout/fragment_city"
+    />
+
+    <fragment
+                android:id="@+id/nav_languages"
+                android:name="com.example.projectathena13.ui.languages.LanguagesFragment"
+                android:label="Languages"
+                tools:layout="@layout/fragment_languages"
+    />
+    <fragment
+                android:id="@+id/nav_todo"
+                android:name="com.example.projectathena13.ui.todo.ToDoFragment"
+                android:label="To Do"
+                tools:layout="@layout/fragment_todo"
+    />
+
+    <fragment
+                android:id="@+id/nav_mathematics"
+                android:name="com.example.projectathena13.ui.mathematics.MathematicsFragment"
+                android:label="Mathematics"
+                tools:layout="@layout/fragment_mathematics"
+    />
+    <fragment
+                android:id="@+id/nav_literacy"
+                android:name="com.example.projectathena13.ui.literacy.LiteracyFragment"
+                android:label="Literacy"
+                tools:layout="@layout/fragment_literacy"
+    />
+
+
+</navigation>

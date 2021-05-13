@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Most Recent Achievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+    />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="168dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="136dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                app:srcCompat="@drawable/achievement_cropped"
+                android:id="@+id/imageView9"
+            />
+
+            <TextView
+                android:text="@string/achievementNamePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="136dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                app:srcCompat="@drawable/achievement_cropped"
+                android:id="@+id/imageView8"
+            />
+
+            <TextView
+                android:text="@string/achievementNamePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="140dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                app:srcCompat="@drawable/achievement_cropped"
+                android:id="@+id/imageView7"
+            />
+
+            <TextView
+                android:text="@string/achievementNamePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+    />
+
+    <TextView
+        android:text="All Achievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+    />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="102dp">
+
+        <Button
+            android:text="@string/mathematics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+        />
+
+        <Button
+            android:text="@string/literacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+        />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="413dp"
+            android:layout_height="422dp"
+            app:srcCompat="@drawable/math_course_2"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[module_name]"
+            />
+
+            <org.eazegraph.lib.charts.PieChart
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:layout_editor_absoluteX="185dp"
+                tools:layout_editor_absoluteY="69dp"
+            />
+
+        </LinearLayout>
+
+
+        <!--        <Button-->
+<!--            android:text="Button"-->
+<!--            android:layout_width="47dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:id="@+id/button4"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView2"-->
+<!--            android:layout_marginBottom="304dp"-->
+<!--            android:visibility="invisible"-->
+<!--        />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="422dp">
+
+        <ImageView
+            android:layout_width="407dp"
+            android:layout_height="417dp"
+            app:srcCompat="@drawable/literacy_course_2"
+            android:id="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <Button
+            android:text="Button"
+            android:layout_width="46dp"
+            android:layout_height="51dp"
+            android:id="@+id/button5"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintVertical_bias="0.114"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

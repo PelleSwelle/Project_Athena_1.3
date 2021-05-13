@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+<!--    util -->
+    <group
+        android:id="@+id/nav_util"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_cropped"
+            android:title="@string/menu_home"
+        />
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/home_cropped"
+            android:title="@string/dashboard"
+        />
+        <item
+            android:id="@+id/nav_city"
+            android:icon="@drawable/city_cropped"
+            android:title="@string/city"
+        />
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/to_do"
+            android:title="@string/to_do"
+        />
+        <item
+            android:id="@+id/nav_languages"
+            android:icon="@drawable/choose_laungage_cropped"
+            android:title="@string/choose_language"
+        />
+        <item
+            android:id="@+id/nav_achievements"
+            android:icon="@drawable/achievement_cropped"
+            android:title="@string/achievements"
+        />
+    </group>
+<!--    subjects -->
+    <group
+        android:id="@+id/nav_subjects"
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_mathematics"
+            android:icon="@drawable/mathematics"
+            android:title="@string/mathematics"
+        />
+        <item android:id="@+id/nav_literacy"
+            android:icon="@drawable/arabic_language"
+            android:title="@string/literacy"
+        />
+
+    </group>
+</menu>
