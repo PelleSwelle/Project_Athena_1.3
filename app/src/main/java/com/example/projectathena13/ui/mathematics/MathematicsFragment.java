@@ -8,6 +8,8 @@ import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 import com.example.projectathena13.*;
 import org.eazegraph.lib.charts.PieChart;
 
@@ -35,6 +37,8 @@ public class MathematicsFragment extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         mathematicsViewModel = new ViewModelProvider(this).get(MathematicsViewModel.class);
+
+
 
         selfAssessmentLessons = new ArrayList<Lesson>();
         selfAssessmentLessons.add(new Lesson("Self Assessment – Year 7"));

@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.todo.ToDoFragment">
+    android:layout_height="match_parent" android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text_todo"
+        android:text="To do"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/todo_title" android:textSize="30sp"/>
+    <View android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgroundNormal"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="188dp" android:id="@+id/goals_short">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Short term goal"
+            android:ems="10"
+            android:id="@+id/short1"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Short term goal"
+            android:ems="10"
+            android:id="@+id/short2"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Short term goal"
+            android:ems="10"
+            android:id="@+id/short3"/>
+        <Button
+            android:text="+ Add new goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newgoal_short"
+        />
+    </LinearLayout>
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/positiveColor"
+    />
+    <TextView
+        android:id="@+id/longterm_title"
+        android:text="Long term goals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30sp"/>
+
+    <View android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/positiveColor"
+    />
+
+    <LinearLayout android:id="@+id/goals_long"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/long1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Long term goal"
+            android:ems="10"
         />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/long2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Long term goal"
+            android:ems="10"
+        />
+        <EditText
+            android:id="@+id/long3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Long term goal"
+            android:ems="10"
+        />
+        <Button android:id="@+id/newgoal_long"
+            android:text="+ Add new goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+</LinearLayout>

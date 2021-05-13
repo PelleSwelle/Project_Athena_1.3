@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+    <TextView
+        android:text="Choose a grade"
+        android:layout_width="match_parent"
+        android:layout_height="95dp" android:id="@+id/choosegrade_title" android:gravity="center_horizontal"
+        android:textSize="36sp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="265dp" android:id="@+id/lowersecondary">
+        <TextView
+            android:text="Lower secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lowersecondary_title" android:gravity="center_horizontal"
+            android:textSize="24sp"/>
+        <Button
+            android:text="@string/grade7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lowersecondary_grade7"
+            />
+        <Button
+            android:text="@string/grade8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lowersecondary_grade8"/>
+        <Button
+            android:text="@string/grade9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lowersecondary_grade9"/>
+        <Button
+            android:text="@string/grade10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lowersecondary_grade10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/uppersecondary">
+        <TextView
+            android:text="Upper secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/uppersecondary_title"
+            android:gravity="center_horizontal"
+            android:textSize="24sp"/>
+        <Button
+            android:text="@string/grade11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/uppersecondary_grade11"/>
+        <Button
+            android:text="@string/grade12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/uppersecondary_grade12"/>
+    </LinearLayout>
+</LinearLayout>

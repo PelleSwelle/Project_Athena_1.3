@@ -35,4 +35,10 @@
 
     <string name="goals">Goals and to-do:</string>
     <string name="recentActivities">Recent activities:</string>
+    <string name="grade7">7th grade</string>
+    <string name="grade8">8th grade</string>
+    <string name="grade9">9th grade</string>
+    <string name="grade10">10th grade</string>
+    <string name="grade11">11th grade</string>
+    <string name="grade12">12th grade</string>
 </resources>

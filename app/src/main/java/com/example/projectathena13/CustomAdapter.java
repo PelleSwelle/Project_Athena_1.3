@@ -7,7 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import com.example.projectathena13.ui.mathematics.MathematicsFragment;
 import com.google.android.material.snackbar.Snackbar;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
@@ -23,6 +29,7 @@ public class CustomAdapter extends ArrayAdapter<Module> implements View.OnClickL
     private ArrayList<Module> modules;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
+
 
     Context mContext;
 
@@ -45,26 +52,23 @@ public class CustomAdapter extends ArrayAdapter<Module> implements View.OnClickL
     }
 
 
-
     public void onClick(View _view)
     {
-        int position = (Integer) _view.getTag();
-        Object object = getItem(position);
-        Module module = (Module) object;
-
-        switch (_view.getId())
-        {
-            case R.id.tv_title:
-                Snackbar.make(_view, "this is title", Snackbar.LENGTH_LONG);
-
-//                mContext.startActivity(new Intent(mContext, LessonsActivity.class));
-
-                break;
-
-            case R.id.piechart:
-                Snackbar.make(_view, "this is pie chart", Snackbar.LENGTH_LONG);
-                break;
-        }
+//        int position = (Integer) _view.getTag();
+//        Object object = getItem(position);
+//        Module module = (Module) object;
+//
+//
+//        switch (_view.getId())
+//        {
+//            case R.id.tv_title:
+//                Snackbar.make(_view, "this is title", Snackbar.LENGTH_LONG).show();
+//
+////                mContext.startActivity(new Intent(mContext, LessonsActivity.class));
+//
+//            case R.id.piechart:
+//                Snackbar.make(_view, "this is pie chart", Snackbar.LENGTH_LONG);
+//        }
     }
 
     private int lastPosition = -1;
@@ -143,7 +147,19 @@ public class CustomAdapter extends ArrayAdapter<Module> implements View.OnClickL
         viewHolder.pieChart.startAnimation();
         viewHolder.tv_title.setText(module.getTitle());
 
+        _convertView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View _view)
+            {
+//                int position = (Integer) _view.getTag();
+//                Object object = getItem(position);
+//                Module module = (Module) object;
+                Toast.makeText(mContext, "View" + module.getTitle(), Toast.LENGTH_SHORT).show();
 
+//                MathematicsFragment.findNavController(R.layout.content_main).navigate(R.id.action_nav_mathematics_to_nav_lessons);
+            }
+        });
         return _convertView;
     }
 }

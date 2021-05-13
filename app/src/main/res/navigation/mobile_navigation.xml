@@ -18,6 +18,13 @@
         android:label="@string/menu_dashboard"
         tools:layout="@layout/fragment_dashboard"
     />
+    <fragment
+        android:id="@+id/nav_lessons"
+        android:name="com.example.projectathena13.ui.lesson.LessonsFragment"
+        android:label="Lessons"
+        tools:layout="@layout/fragment_lessons"
+    />
+
 
 <!--    <fragment-->
 <!--        android:id="@+id/nav_gallery"-->
@@ -64,7 +71,13 @@
                 android:name="com.example.projectathena13.ui.mathematics.MathematicsFragment"
                 android:label="Mathematics"
                 tools:layout="@layout/fragment_mathematics"
-    />
+    >
+        <action
+            android:id="@+id/action_nav_mathematics_to_nav_lessons"
+            app:destination="@id/nav_lessons"
+        />
+    </fragment>
+
     <fragment
                 android:id="@+id/nav_literacy"
                 android:name="com.example.projectathena13.ui.literacy.LiteracyFragment"
