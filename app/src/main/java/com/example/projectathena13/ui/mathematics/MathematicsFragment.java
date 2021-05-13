@@ -24,7 +24,7 @@ public class MathematicsFragment extends Fragment
     TextView txtView;
     LinearLayout linearLayout;
     ListView lv_pieChart;
-    private static CustomAdapter adapter;
+    private static ModuleAdapter adapter;
 
     ArrayList<Module> modules;
     ArrayList<Lesson> selfAssessmentLessons;
@@ -33,6 +33,7 @@ public class MathematicsFragment extends Fragment
     ArrayList<Lesson> decimalsLessons;
     ArrayList<Lesson> percentagesLessons;
     ArrayList<Lesson> fractionsLessons;
+    public NavHostFragment navHostFragment;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -109,7 +110,7 @@ public class MathematicsFragment extends Fragment
         imgView = root.findViewById(R.id.piechart);
         lv_pieChart = root.findViewById(R.id.math_modules);
 
-        adapter = new CustomAdapter(modules, getContext());
+        adapter = new ModuleAdapter(modules, getContext());
 
         lv_pieChart.setAdapter(adapter);
 
@@ -127,6 +128,8 @@ public class MathematicsFragment extends Fragment
 
         return root;
     }
+
+
 
     // this is for programmaticilly setting the margin of the viewholders, when moving down the screen.
     public static void setMargins (View _view, int _left, int _top, int _right, int _bottom) {

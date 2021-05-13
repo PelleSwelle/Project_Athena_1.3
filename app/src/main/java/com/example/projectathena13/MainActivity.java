@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+//    public void goToLessons() {
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+//        navController.navigate(R.id.action_nav_mathematics_to_nav_lessons);
+//    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {

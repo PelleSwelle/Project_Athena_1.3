@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.projectathena13.MainActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -23,12 +25,15 @@ import java.util.ArrayList;
 import static android.content.ContentValues.TAG;
 
 // TODO probably make this extend recyclerView instead. ArrayAdapter is for ListView, recyclerView is for recyclerView
-public class CustomAdapter extends ArrayAdapter<Module> implements View.OnClickListener
+public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickListener
 {
 
     private ArrayList<Module> modules;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
+//    FragmentManager fragmentManager
+
+//    NavHostFragment navHostFragment = (NavHostFragment)  getFragmentManager().findFragmentById(R.id.nav_host_fragment);
 
 
     Context mContext;
@@ -43,7 +48,7 @@ public class CustomAdapter extends ArrayAdapter<Module> implements View.OnClickL
 
 
     // constructor
-    public CustomAdapter(ArrayList<Module> _modules, Context _context)
+    public ModuleAdapter(ArrayList<Module> _modules, Context _context)
     {
         super(_context, R.layout.pie, _modules);
 
@@ -157,7 +162,9 @@ public class CustomAdapter extends ArrayAdapter<Module> implements View.OnClickL
 //                Module module = (Module) object;
                 Toast.makeText(mContext, "View" + module.getTitle(), Toast.LENGTH_SHORT).show();
 
-//                MathematicsFragment.findNavController(R.layout.content_main).navigate(R.id.action_nav_mathematics_to_nav_lessons);
+//                NavController navController = Navigation.findNavController(MainActivity, R.id.nav_host_fragment);
+//                navController.navigate(R.id.action_nav_mathematics_to_nav_lessons);
+
             }
         });
         return _convertView;

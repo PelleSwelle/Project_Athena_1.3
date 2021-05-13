@@ -8,11 +8,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.projectathena13.CustomAdapter;
+import com.example.projectathena13.ModuleAdapter;
 import com.example.projectathena13.Lesson;
 import com.example.projectathena13.Module;
 import com.example.projectathena13.R;
@@ -28,7 +26,7 @@ public class LiteracyFragment extends Fragment
     TextView txtView;
     LinearLayout linearLayout;
     ListView pieList;
-    private static CustomAdapter adapter;
+    private static ModuleAdapter adapter;
 
     ArrayList<Module> modules;
     ArrayList<Lesson> module1Lessons;
@@ -67,7 +65,7 @@ public class LiteracyFragment extends Fragment
         imgView = root.findViewById(R.id.piechart);
         pieList = root.findViewById(R.id.math_modules);
 
-        adapter = new CustomAdapter(modules, getContext());
+        adapter = new ModuleAdapter(modules, getContext());
 //        final TextView textView = root.findViewById(R.id.text_literacy);
 //        literacyViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>()
 //        {
