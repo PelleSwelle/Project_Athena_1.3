@@ -41,4 +41,8 @@
     <string name="grade10">10th grade</string>
     <string name="grade11">11th grade</string>
     <string name="grade12">12th grade</string>
+    <string name="languages">Languages</string>
+    <string name="passwordPlaceholder">[PASSWORD]</string>
+    <string name="prompt_password">Change Passwrod</string>
+    <string name="prompt_email">Change Email</string>
 </resources>
