@@ -114,22 +114,38 @@
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="101dp"
-                android:layout_height="74dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="104dp" android:layout_marginRight="104dp"
-                android:layout_marginTop="100dp">
+                    android:orientation="vertical"
+                    android:layout_width="114dp"
+                    android:layout_height="127dp" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/ach1" android:visibility="gone">
+                <ImageView
+                        android:src="@drawable/agora_ph"
+                        android:layout_width="113dp"
+                        android:layout_height="105dp" android:id="@+id/imageView"
+                />
                 <TextView
-                    android:text="[module_name]"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView13"/>
+                        android:text="Agora unlocked"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView15"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="101dp"
+                    android:layout_height="74dp"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="68dp" android:layout_marginRight="68dp"
+                    android:layout_marginTop="104dp">
+                <TextView
+                        android:text="[module_name]"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView13"/>
                 <Button
-                    android:text="Button"
-                    android:layout_width="47dp"
-                    android:layout_height="38dp" android:id="@+id/button4"
-                    android:layout_marginBottom="304dp"
-                    android:visibility="invisible" android:gravity="center_horizontal"/>
+                        android:text="Button"
+                        android:layout_width="47dp"
+                        android:layout_height="38dp" android:id="@+id/button4"
+                        android:layout_marginBottom="304dp"
+                        android:visibility="invisible" android:gravity="center_horizontal"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
