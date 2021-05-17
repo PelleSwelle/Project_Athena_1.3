@@ -1,4 +1,4 @@
-package com.example.projectathena13.ui.mathematics.module1;
+package com.example.projectathena13.ui;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.projectathena13.Lesson;
 import com.example.projectathena13.LessonsAdapter;
+import com.example.projectathena13.ModuleAdapter;
 import com.example.projectathena13.R;
 import com.example.projectathena13.ui.lesson.LessonsViewModel;
 import org.eazegraph.lib.charts.PieChart;
@@ -40,10 +41,11 @@ public class LessonsFragment extends Fragment
     {
         lessonsViewModel = new ViewModelProvider(this).get(LessonsViewModel.class);
 
-        lessons = new ArrayList<Lesson>();
-        lessons.add(new Lesson("Multiplying 2-digit numbers by 2-digit numbers"));
-        lessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
-        lessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
+//        lessons = new ArrayList<Lesson>();
+//        lessons.add(new Lesson("Multiplying 2-digit numbers by 2-digit numbers"));
+//        lessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
+//        lessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
+
 
 
         View root = inflater.inflate(R.layout.fragment_lessons, container, false);
@@ -54,6 +56,8 @@ public class LessonsFragment extends Fragment
         imgView = root.findViewById(R.id.piechart);
         lv_pieChart = root.findViewById(R.id.lv_lessons);
 
+        // TODO make dynamic depending on which module you press.
+        lessons = ModuleAdapter.lessonsToBeSent;
         adapter = new LessonsAdapter(lessons, getContext());
 
         popWindow = new PopupWindow(inflater.inflate(R.layout.lesson_popup, null, false), 1200,2000, true);

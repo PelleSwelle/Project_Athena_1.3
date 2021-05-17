@@ -20,7 +20,6 @@ import static android.content.ContentValues.TAG;
 // TODO probably make this extend recyclerView instead. ArrayAdapter is for ListView, recyclerView is for recyclerView
 public class LessonsAdapter extends ArrayAdapter<Lesson> implements View.OnClickListener
 {
-
     private ArrayList<Lesson> lessons;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
@@ -44,7 +43,6 @@ public class LessonsAdapter extends ArrayAdapter<Lesson> implements View.OnClick
         this.lessons = _lessons;
         this.mContext = _context;
     }
-
 
 
     public void onClick(View _view)
