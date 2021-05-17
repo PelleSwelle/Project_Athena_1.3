@@ -55,7 +55,7 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
         this.mContext = _context;
     }
 
-
+    // TODO on of 2 onClicks
     public void onClick(View _view)
     {
 //        int position = (Integer) _view.getTag();
@@ -153,6 +153,7 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
 
         _convertView.setOnClickListener(new View.OnClickListener()
         {
+            // TODO 2nd of 2 onClicks
             @Override
             public void onClick(View _view)
             {
