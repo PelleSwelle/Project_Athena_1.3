@@ -8,8 +8,6 @@ import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
 import com.example.projectathena13.*;
 import org.eazegraph.lib.charts.PieChart;
 
@@ -26,6 +24,7 @@ public class MathematicsFragment extends Fragment
     ListView lv_pieChart;
     private static ModuleAdapter adapter;
 
+
     ArrayList<Module> modules;
     ArrayList<Lesson> selfAssessmentLessons;
     ArrayList<Lesson> multiplicationLessons;
@@ -33,13 +32,12 @@ public class MathematicsFragment extends Fragment
     ArrayList<Lesson> decimalsLessons;
     ArrayList<Lesson> percentagesLessons;
     ArrayList<Lesson> fractionsLessons;
-    public NavHostFragment navHostFragment;
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         mathematicsViewModel = new ViewModelProvider(this).get(MathematicsViewModel.class);
-
-
 
         selfAssessmentLessons = new ArrayList<Lesson>();
         selfAssessmentLessons.add(new Lesson("Self Assessment – Year 7"));
@@ -93,28 +91,30 @@ public class MathematicsFragment extends Fragment
         fractionsLessons.add(new Lesson("Multiplying fractions"));
         fractionsLessons.add(new Lesson("Multiplying mixed numbers (mixed numerals)"));
 
+
+        // instantiating the lessons in all modules.
         modules = new ArrayList<Module>();
 
-        // TODO get number of lessons per module from resource
-        modules.add(new Module("Self-assessment", selfAssessmentLessons, true));
-        modules.add(new Module("Multiplication", multiplicationLessons, true));
-        modules.add(new Module("Division/repeat subtraction", divisionRepeatSubtractionLessons, true));
-        modules.add(new Module("Decimals", decimalsLessons, true));
-        modules.add(new Module("Percentages", percentagesLessons, true));
-        modules.add(new Module("Fractions", fractionsLessons, true));
+        modules.add(new Module("Self-assessment", selfAssessmentLessons));
+        modules.add(new Module("Multiplication", multiplicationLessons));
+        modules.add(new Module("Division/repeat subtraction", divisionRepeatSubtractionLessons));
+        modules.add(new Module("Decimals", decimalsLessons));
+        modules.add(new Module("Percentages", percentagesLessons));
+        modules.add(new Module("Fractions", fractionsLessons));
 
 
         View root = inflater.inflate(R.layout.fragment_mathematics, container, false);
 
         txtView = root.findViewById(R.id.tv_title);
         imgView = root.findViewById(R.id.piechart);
-        lv_pieChart = root.findViewById(R.id.math_modules);
+        lv_pieChart = root.findViewById(R.id.lv_math_modules);
 
         adapter = new ModuleAdapter(modules, getContext());
 
         lv_pieChart.setAdapter(adapter);
 
         PieChart _piechart = (PieChart) root.findViewById(R.id.piechart);
+
 
 
 
@@ -128,6 +128,7 @@ public class MathematicsFragment extends Fragment
 
         return root;
     }
+
 
 
 

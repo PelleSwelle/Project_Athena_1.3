@@ -136,6 +136,7 @@ public class LessonsAdapter extends ArrayAdapter<Lesson> implements View.OnClick
         viewHolder.tv_title.setText(lesson.getTitle());
 
 
+
         return _convertView;
     }
 }

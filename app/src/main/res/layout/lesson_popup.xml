@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pargment"
+    tools:context="LessonPopUp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView android:id="@+id/exitCross"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/exit"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:gravity="center"
+        android:text="Lesson # materials"
+
+        android:textAllCaps="true"
+
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tv_material1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:gravity="center"
+
+        android:text="material 1.pdf"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tv_material2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="material 2.pdf"
+        android:clickable="true"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_material1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView android:id="@+id/tv_homework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="homework.pdf"
+        android:clickable="true"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_material2"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
