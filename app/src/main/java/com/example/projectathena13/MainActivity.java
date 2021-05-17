@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity
 
     private AppBarConfiguration mAppBarConfiguration;
 
+    public AppBarConfiguration getmAppBarConfiguration()
+    {
+        return mAppBarConfiguration;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity
         FloatingActionButton fab = findViewById(R.id.fab);
 
         PopupMenu popMenu = new PopupMenu(MainActivity.this, fab);
+
         fab.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -43,15 +49,24 @@ public class MainActivity extends AppCompatActivity
                 popMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener()
                 {
                     @Override
-                    public boolean onMenuItemClick(MenuItem item)
+                    public boolean onMenuItemClick(MenuItem _item)
                     {
                         // TODO what happens with each menu option
+                        switch (_item.getItemId()) {
+                            case R.id.fab_dashboard:
+                                Toast.makeText(MainActivity.this, "dashboard", Toast.LENGTH_SHORT).show();
+                                //TODO fab go to dashboard
+                            case R.id.fab_city:
+                                Toast.makeText(MainActivity.this, "City", Toast.LENGTH_SHORT).show();
+                                // TODO fab go to city
+                        }
+
+
 
                         return false;
                     }
                 });
                 popMenu.show();
-
             }
         });
 
@@ -82,11 +97,6 @@ public class MainActivity extends AppCompatActivity
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
-
-//    public void goToLessons() {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        navController.navigate(R.id.action_nav_mathematics_to_nav_lessons);
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
