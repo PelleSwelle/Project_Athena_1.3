@@ -10,12 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.navigation.ui.NavigationUI;
 import com.example.projectathena13.MainActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import com.example.projectathena13.ui.mathematics.MathematicsFragment;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
@@ -33,11 +35,8 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
     int notDoneColor = Color.parseColor("#3daee9");
 //    FragmentManager fragmentManager
 
-//    NavHostFragment navHostFragment = (NavHostFragment)  getFragmentManager().findFragmentById(R.id.nav_host_fragment);
-
-
     Context mContext;
-
+    public static ArrayList lessonsToBeSent;
 
     // represents the linear layout holding the text- and imageView
     private static class ViewHolder
@@ -56,7 +55,7 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
         this.mContext = _context;
     }
 
-
+    // TODO on of 2 onClicks
     public void onClick(View _view)
     {
 //        int position = (Integer) _view.getTag();
@@ -154,6 +153,7 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
 
         _convertView.setOnClickListener(new View.OnClickListener()
         {
+            // TODO 2nd of 2 onClicks
             @Override
             public void onClick(View _view)
             {
@@ -165,8 +165,22 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
 //                NavController navController = Navigation.findNavController(MainActivity, R.id.nav_host_fragment);
 //                navController.navigate(R.id.action_nav_mathematics_to_nav_lessons);
 
+                _view.setOnClickListener(new View.OnClickListener()
+                {
+
+                    @Override
+                    public void onClick(View v)
+                    {
+                        lessonsToBeSent = module.getLessons();
+                        Navigation.findNavController(_view).navigate(R.id.nav_math1lessons);
+                    }
+
+                });
+                // TODO gotolessons
+
             }
         });
         return _convertView;
     }
+
 }

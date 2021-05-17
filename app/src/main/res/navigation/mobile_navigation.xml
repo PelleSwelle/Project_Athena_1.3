@@ -11,17 +11,49 @@
         android:name="com.example.projectathena13.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home"
-    />
+    >
+        <action
+            android:id="@+id/action_nav_home_to_nav_dashboard"
+            app:destination="@id/nav_dashboard" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_languages"
+            app:destination="@id/nav_languages" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_todo"
+            app:destination="@id/nav_todo" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_city"
+            app:destination="@id/nav_city" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_achievements"
+            app:destination="@id/nav_achievements" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_literacy"
+            app:destination="@id/nav_literacy" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_mathematics"
+            app:destination="@id/nav_mathematics" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_dashboard"
         android:name="com.example.projectathena13.ui.dashboard.DashboardFragment"
         android:label="@string/menu_dashboard"
         tools:layout="@layout/fragment_dashboard"
-    />
+    >
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_todo"
+            app:destination="@id/nav_todo" />
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/nav_lessons"-->
+<!--        android:name="com.example.projectathena13.ui.lesson.LessonsFragment"-->
+<!--        android:label="Lessons"-->
+<!--        tools:layout="@layout/fragment_lessons"-->
+<!--    />-->
     <fragment
-        android:id="@+id/nav_lessons"
-        android:name="com.example.projectathena13.ui.lesson.LessonsFragment"
+        android:id="@+id/nav_math1lessons"
+        android:name="com.example.projectathena13.ui.LessonsFragment"
         android:label="Lessons"
         tools:layout="@layout/fragment_lessons"
     />
@@ -71,12 +103,20 @@
                 android:id="@+id/nav_mathematics"
                 android:name="com.example.projectathena13.ui.mathematics.MathematicsFragment"
                 android:label="Mathematics"
-                tools:layout="@layout/fragment_mathematics"
-    >
+                tools:layout="@layout/fragment_mathematics">
         <action
             android:id="@+id/action_nav_mathematics_to_nav_lessons"
-            app:destination="@id/nav_lessons"
-        />
+            app:destination="@id/nav_math1lessons">
+
+            <argument
+                android:name="moduleName"
+                app:argType="string"
+                android:defaultValue="null"
+            />
+
+        </action>
+
+
     </fragment>
 
     <fragment
@@ -84,7 +124,11 @@
                 android:name="com.example.projectathena13.ui.literacy.LiteracyFragment"
                 android:label="Literacy"
                 tools:layout="@layout/fragment_literacy"
-    />
+    >
+        <action
+            android:id="@+id/action_nav_literacy_to_nav_math1lessons"
+            app:destination="@id/nav_math1lessons" />
+    </fragment>
 
 
 </navigation>

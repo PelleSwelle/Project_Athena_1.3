@@ -6,70 +6,102 @@
     android:layout_height="match_parent"
     tools:context="ui.achievements.AchievementsFragment"
     android:orientation="vertical">
+
     <TextView
         android:text="Most Recent Achievements"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:id="@+id/textView"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+    />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="168dp" tools:visibility="visible">
+        android:layout_height="168dp">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="136dp"
             android:layout_height="match_parent">
+
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="148dp" app:srcCompat="@drawable/achievement_cropped"
-                android:id="@+id/imageView9"/>
+                android:layout_height="148dp"
+                app:srcCompat="@drawable/achievement_cropped"
+                android:id="@+id/imageView9"
+            />
+
             <TextView
                 android:text="@string/achievementNamePlaceholder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView8"
-                android:gravity="center_horizontal"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:gravity="center_horizontal"
+            />
         </LinearLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="136dp"
             android:layout_height="match_parent">
+
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="148dp" app:srcCompat="@drawable/achievement_cropped"
-                android:id="@+id/imageView8"/>
+                android:layout_height="148dp"
+                app:srcCompat="@drawable/achievement_cropped"
+                android:id="@+id/imageView8"
+            />
+
             <TextView
                 android:text="@string/achievementNamePlaceholder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView7"
-                android:gravity="center_horizontal"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:gravity="center_horizontal"
+            />
         </LinearLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="140dp"
             android:layout_height="match_parent">
+
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="148dp" app:srcCompat="@drawable/achievement_cropped"
-                android:id="@+id/imageView7"/>
+                android:layout_height="148dp"
+                app:srcCompat="@drawable/achievement_cropped"
+                android:id="@+id/imageView7"
+            />
+
             <TextView
                 android:text="@string/achievementNamePlaceholder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView6"
-                android:gravity="center_horizontal"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:gravity="center_horizontal"
+            />
         </LinearLayout>
     </LinearLayout>
-    <View android:id="@+id/divider"
+
+    <View
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/positiveColor"
-        />
+    />
+
     <TextView
         android:text="All Achievements"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:id="@+id/textView9"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+    />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -102,17 +134,25 @@
                     android:text="History"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/button27"/>
+
         </LinearLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/literacyConstraint"
             android:layout_width="wrap_content"
-            android:layout_height="564dp" tools:visibility="visible">
+            android:layout_height="564dp">
 
             <ImageView
+                android:id="@+id/iv_literacyTree"
                 android:layout_width="407dp"
-                android:layout_height="417dp" app:srcCompat="@drawable/literacy_course_2"
-                android:id="@+id/imageView3"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                android:layout_height="417dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/literacy_course_2"
+            />
+
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="101dp"
@@ -131,6 +171,7 @@
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                 />
+
             </LinearLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:orientation="vertical"
@@ -157,34 +198,46 @@
                         android:layout_marginEnd="4dp" android:layout_marginRight="4dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mathTree"
             android:layout_width="358dp"
-            android:layout_height="562dp" android:visibility="visible" tools:visibility="visible">
+            android:layout_height="562dp">
 
             <ImageView
+                android:id="@+id/iv_mathTree"
                 android:layout_width="413dp"
-                android:layout_height="422dp" app:srcCompat="@drawable/math_course_2"
-                android:id="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                tools:visibility="visible" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:layout_height="422dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/math_course_2"
+            />
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="104dp"
                 android:layout_height="63dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="100dp" android:layout_marginRight="100dp"
-                android:layout_marginTop="124dp">
+                android:layout_marginTop="124dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
                 <TextView
-                    android:text="[module_name]"
+                    android:id="@+id/textView14"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView14"/>
+                    android:layout_height="wrap_content"
+                    android:text="[module_name]"
+                />
+
                 <Button
-                    android:text="Button"
+                    android:id="@+id/button5"
                     android:layout_width="43dp"
-                    android:layout_height="wrap_content" android:id="@+id/button5"
-                    android:visibility="invisible"
-                    />
+                    android:layout_height="wrap_content"
+                    android:text="Button"
+                />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
