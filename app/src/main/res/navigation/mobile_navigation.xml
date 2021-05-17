@@ -53,7 +53,7 @@
 <!--    />-->
     <fragment
         android:id="@+id/nav_math1lessons"
-        android:name="com.example.projectathena13.ui.mathematics.module1.LessonsFragment"
+        android:name="com.example.projectathena13.ui.LessonsFragment"
         android:label="Lessons"
         tools:layout="@layout/fragment_lessons"
     />
@@ -124,7 +124,11 @@
                 android:name="com.example.projectathena13.ui.literacy.LiteracyFragment"
                 android:label="Literacy"
                 tools:layout="@layout/fragment_literacy"
-    />
+    >
+        <action
+            android:id="@+id/action_nav_literacy_to_nav_math1lessons"
+            app:destination="@id/nav_math1lessons" />
+    </fragment>
 
 
 </navigation>

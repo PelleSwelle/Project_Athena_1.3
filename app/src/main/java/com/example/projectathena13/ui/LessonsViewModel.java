@@ -1,4 +1,4 @@
-package com.example.projectathena13.ui.mathematics.module1;
+package com.example.projectathena13.ui;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -31,12 +31,7 @@ public class Module
         return this.lessons;
     }
 
-    public void setLessons(int _grade, int _moduleNumber) {
-//        Switch (_grade) {
-//            case 7:
-//                // set grade to 7;
-//        }
-    }
+
 
 
 }

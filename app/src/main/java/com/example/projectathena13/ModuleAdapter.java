@@ -36,6 +36,7 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
 //    FragmentManager fragmentManager
 
     Context mContext;
+    public static ArrayList lessonsToBeSent;
 
     // represents the linear layout holding the text- and imageView
     private static class ViewHolder
@@ -165,11 +166,14 @@ public class ModuleAdapter extends ArrayAdapter<Module> implements View.OnClickL
 
                 _view.setOnClickListener(new View.OnClickListener()
                 {
+
                     @Override
                     public void onClick(View v)
                     {
-                        Navigation.findNavController(_view).navigate(R.id.action_nav_mathematics_to_nav_lessons);
+                        lessonsToBeSent = module.getLessons();
+                        Navigation.findNavController(_view).navigate(R.id.nav_math1lessons);
                     }
+
                 });
                 // TODO gotolessons
 
