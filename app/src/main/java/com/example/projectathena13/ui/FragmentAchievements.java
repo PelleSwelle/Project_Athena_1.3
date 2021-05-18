@@ -28,6 +28,9 @@ public class FragmentAchievements extends Fragment
     ImageView mathTree;
     ImageView litTree;
 
+    ConstraintLayout literacyConstraint;
+    ConstraintLayout mathConstraint;
+
 
 
     ArrayList buttons;
@@ -57,7 +60,11 @@ public class FragmentAchievements extends Fragment
 
         ImageButton achpop1 = root.findViewById(R.id.imageButton);
         ImageButton achclose1 = root.findViewById(R.id.imageButton2);
+        mathButton = root.findViewById(R.id.button_math);
+        literacyButton = root.findViewById(R.id.button_literacy);
         ConstraintLayout achpopL = root.findViewById(R.id.ach1);
+        literacyConstraint = root.findViewById(R.id.literacyConstraint);
+        mathConstraint = root.findViewById(R.id.mathTree);
 
         achpop1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +85,35 @@ public class FragmentAchievements extends Fragment
                 }
             }
         });
+
+        literacyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (literacyConstraint.getVisibility() == View.GONE)
+                {
+                    literacyConstraint.setVisibility(View.VISIBLE);
+                    mathConstraint.setVisibility(View.GONE);
+                } else
+                {
+                    literacyConstraint.setVisibility(View.GONE);
+                }
+            }
+        });
+        mathButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mathConstraint.getVisibility() == View.GONE)
+                {
+                    mathConstraint.setVisibility(View.VISIBLE);
+                    literacyConstraint.setVisibility(View.GONE);
+                } else
+                {
+                    mathConstraint.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
 
         return root;
     }

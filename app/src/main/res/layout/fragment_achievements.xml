@@ -104,13 +104,13 @@
                 android:text="@string/mathematics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button" />
+                android:id="@+id/button_math" />
 
             <Button
                 android:text="@string/literacy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2" />
+                android:id="@+id/button_literacy" />
 
             <Button
                 android:text="@string/arabic"
@@ -145,119 +145,119 @@
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/literacyConstraint"
-            android:layout_width="wrap_content"
-            android:layout_height="564dp">
+                android:id="@+id/literacyConstraint"
+                android:layout_width="wrap_content"
+                android:layout_height="564dp" android:visibility="visible">
 
             <ImageView
-                android:id="@+id/iv_literacyTree"
-                android:layout_width="407dp"
-                android:layout_height="417dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/background_literacytree" />
+                    android:id="@+id/iv_literacyTree"
+                    android:layout_width="407dp"
+                    android:layout_height="417dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/background_literacytree"/>
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="101dp"
-                android:layout_height="74dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="57dp"
-                android:layout_marginRight="57dp"
-                android:layout_marginTop="100dp">
+                    android:orientation="vertical"
+                    android:layout_width="101dp"
+                    android:layout_height="74dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="57dp"
+                    android:layout_marginRight="57dp"
+                    android:layout_marginTop="100dp">
 
                 <TextView
-                    android:text="[module_name]"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView13" />
+                        android:text="[module_name]"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView13"/>
 
                 <ImageButton
-                    android:src="@drawable/building_agora"
-                    android:layout_width="41dp"
-                    android:layout_height="39dp"
-                    android:id="@+id/imageButton"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true" />
+                        android:src="@drawable/building_agora"
+                        android:layout_width="41dp"
+                        android:layout_height="39dp"
+                        android:id="@+id/imageButton"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"/>
 
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:orientation="vertical"
-                android:layout_width="199dp"
-                android:layout_height="294dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/ach1"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintHorizontal_bias="0.21">
+                    android:orientation="vertical"
+                    android:layout_width="199dp"
+                    android:layout_height="294dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/ach1"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_literacyTree"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.21">
 
                 <ImageView
-                    android:src="@drawable/achievement_firstlesson"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageView6"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="16dp" />
+                        android:src="@drawable/achievement_firstlesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="16dp"/>
 
                 <ImageButton
-                    android:src="@drawable/icon_cross"
-                    android:layout_width="35dp"
-                    android:layout_height="39dp"
-                    android:id="@+id/imageButton2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="28dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginRight="4dp" />
+                        android:src="@drawable/icon_cross"
+                        android:layout_width="35dp"
+                        android:layout_height="39dp"
+                        android:id="@+id/imageButton2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="28dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mathTree"
-            android:layout_width="358dp"
-            android:layout_height="562dp">
+                android:id="@+id/mathTree"
+                android:layout_width="358dp"
+                android:layout_height="562dp" android:visibility="gone">
 
             <ImageView
-                android:id="@+id/iv_mathTree"
-                android:layout_width="413dp"
-                android:layout_height="422dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/background_mathtree" />
-
+                    android:id="@+id/iv_mathTree"
+                    android:layout_width="413dp"
+                    android:layout_height="422dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/background_mathtree" app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintVertical_bias="0.242"/>
             <LinearLayout
-                android:layout_width="104dp"
-                android:layout_height="63dp"
-                android:layout_marginTop="124dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginRight="100dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                    android:layout_width="104dp"
+                    android:layout_height="63dp"
+                    android:layout_marginTop="88dp"
+                    android:layout_marginEnd="124dp"
+                    android:layout_marginRight="124dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="[module_name]" />
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="[module_name]"/>
 
                 <Button
-                    android:id="@+id/button5"
-                    android:layout_width="43dp"
-                    android:layout_height="wrap_content"
-                    android:text="Button" />
+                        android:id="@+id/button5"
+                        android:layout_width="43dp"
+                        android:layout_height="wrap_content"
+                        android:text="Button"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
