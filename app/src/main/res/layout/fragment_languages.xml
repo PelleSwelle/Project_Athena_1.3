@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ui.languages.LanguagesFragment">
+    tools:context=".ui.FragmentLanguages">
     <TextView
         android:id="@+id/tv_chooseLanguage"
         android:layout_width="match_parent"

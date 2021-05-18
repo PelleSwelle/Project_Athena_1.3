@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.lesson.LessonsFragment">
-
-
+    android:background="@drawable/background_literacylessons"
+    tools:context=".ui.viewmodels.lesson.LessonsFragment">
+<!--        TODO make background change according to module-->
 
     <ListView
         android:id="@+id/lv_lessons"

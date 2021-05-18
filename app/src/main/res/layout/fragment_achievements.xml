@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.achievements.AchievementsFragment"
+    tools:context=".ui.FragmentAchievements"
     android:orientation="vertical">
 
-    <TextView
-        android:text="Most Recent Achievements"
+    <TextView android:id="@+id/tv_recentAchievements"
+        android:text="@string/recent_achievements"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
-    />
+         />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -27,17 +26,15 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="148dp"
-                app:srcCompat="@drawable/achievement_cropped"
-                android:id="@+id/imageView9"
-            />
+                app:srcCompat="@drawable/icon_achievement"
+                android:id="@+id/imageView9" />
 
             <TextView
                 android:text="@string/achievementNamePlaceholder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView8"
-                android:gravity="center_horizontal"
-            />
+                android:gravity="center_horizontal" />
         </LinearLayout>
 
         <LinearLayout
@@ -48,17 +45,15 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="148dp"
-                app:srcCompat="@drawable/achievement_cropped"
-                android:id="@+id/imageView8"
-            />
+                app:srcCompat="@drawable/icon_achievement"
+                android:id="@+id/imageView8" />
 
             <TextView
                 android:text="@string/achievementNamePlaceholder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView7"
-                android:gravity="center_horizontal"
-            />
+                android:gravity="center_horizontal" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,17 +64,15 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="148dp"
-                app:srcCompat="@drawable/achievement_cropped"
-                android:id="@+id/imageView7"
-            />
+                app:srcCompat="@drawable/icon_achievement"
+                android:id="@+id/imageView7" />
 
             <TextView
                 android:text="@string/achievementNamePlaceholder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView6"
-                android:gravity="center_horizontal"
-            />
+                android:gravity="center_horizontal" />
         </LinearLayout>
     </LinearLayout>
 
@@ -87,15 +80,13 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/positiveColor"
-    />
+        android:background="@color/positiveColor" />
 
     <TextView
         android:text="All Achievements"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView9"
-    />
+        android:id="@+id/textView9" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -103,37 +94,53 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="346dp" android:layout_gravity="center_vertical" tools:visibility="visible">
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="346dp"
+            android:layout_gravity="center_vertical"
+            tools:visibility="visible">
+
             <Button
-                    android:text="@string/mathematics"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button"/>
+                android:text="@string/mathematics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button" />
+
             <Button
-                    android:text="@string/literacy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button2"/>
+                android:text="@string/literacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2" />
+
             <Button
-                    android:text="@string/arabic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button23"/>
+                android:text="@string/arabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button23" />
+
             <Button
-                    android:text="Chemistry"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button24"/>
+                android:text="Chemistry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button24" />
+
             <Button
-                    android:text="Physics"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button25"/>
+                android:text="Physics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button25" />
+
             <Button
-                    android:text="biology"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button26"/>
+                android:text="biology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button26" />
+
             <Button
-                    android:text="History"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button27"/>
+                android:text="History"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button27" />
 
         </LinearLayout>
 
@@ -150,52 +157,68 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/literacy_course_2"
-            />
+                app:srcCompat="@drawable/background_literacytree" />
 
             <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="101dp"
-                    android:layout_height="74dp"
-                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="57dp" android:layout_marginRight="57dp"
-                    android:layout_marginTop="100dp">
+                android:orientation="vertical"
+                android:layout_width="101dp"
+                android:layout_height="74dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="57dp"
+                android:layout_marginRight="57dp"
+                android:layout_marginTop="100dp">
+
                 <TextView
-                        android:text="[module_name]"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/textView13"/>
+                    android:text="[module_name]"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView13" />
+
                 <ImageButton
-                        android:src="@drawable/agora_ph"
-                        android:layout_width="41dp"
-                        android:layout_height="39dp" android:id="@+id/imageButton"
-                        android:scaleType="fitCenter"
-                        android:adjustViewBounds="true"
-                />
+                    android:src="@drawable/building_agora"
+                    android:layout_width="41dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/imageButton"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
 
             </LinearLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
-                    android:orientation="vertical"
-                    android:layout_width="199dp"
-                    android:layout_height="294dp" app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:id="@+id/ach1" android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                    app:layout_constraintVertical_bias="0.0" app:layout_constraintHorizontal_bias="0.21">
+                android:orientation="vertical"
+                android:layout_width="199dp"
+                android:layout_height="294dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/ach1"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.21">
+
                 <ImageView
-                        android:src="@drawable/agoradesc_ph"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:id="@+id/imageView6"
-                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="16dp"/>
+                    android:src="@drawable/achievement_firstlesson"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp" />
+
                 <ImageButton
-                        android:src="@drawable/closeach_ph"
-                        android:layout_width="35dp"
-                        android:layout_height="39dp" android:id="@+id/imageButton2"
-                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="28dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:layout_marginEnd="4dp" android:layout_marginRight="4dp"/>
+                    android:src="@drawable/icon_cross"
+                    android:layout_width="35dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/imageButton2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="28dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -212,8 +235,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/math_course_2"
-            />
+                app:srcCompat="@drawable/background_mathtree" />
 
             <LinearLayout
                 android:layout_width="104dp"
@@ -229,15 +251,13 @@
                     android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="[module_name]"
-                />
+                    android:text="[module_name]" />
 
                 <Button
                     android:id="@+id/button5"
                     android:layout_width="43dp"
                     android:layout_height="wrap_content"
-                    android:text="Button"
-                />
+                    android:text="Button" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

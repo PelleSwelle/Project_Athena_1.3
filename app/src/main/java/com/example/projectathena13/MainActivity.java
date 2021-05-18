@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.fragment.NavHostFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -16,6 +18,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+        NavController navController1 = new NavController(this);
 
         PopupMenu popMenu = new PopupMenu(MainActivity.this, fab);
 
@@ -58,7 +63,6 @@ public class MainActivity extends AppCompatActivity
                                 //TODO fab go to dashboard
                             case R.id.fab_city:
                                 Toast.makeText(MainActivity.this, "City", Toast.LENGTH_SHORT).show();
-                                // TODO fab go to city
                         }
 
 
@@ -76,12 +80,6 @@ public class MainActivity extends AppCompatActivity
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-//        mAppBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.nav_home,
-//                R.id.nav_gallery,
-//                R.id.nav_slideshow
-//                ).setOpenableLayout(drawer)
-//                .build();
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
                 R.id.nav_dashboard,
@@ -103,7 +101,21 @@ public class MainActivity extends AppCompatActivity
     {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
+
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_settings);
+
+            case R.id.action_logOut:
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

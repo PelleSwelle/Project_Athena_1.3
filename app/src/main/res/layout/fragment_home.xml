@@ -16,7 +16,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="324dp"
-        app:srcCompat="@drawable/logo_mock_up"
+        app:srcCompat="@drawable/logo_main"
         android:id="@+id/welcome_logo" />
 
     <LinearLayout
