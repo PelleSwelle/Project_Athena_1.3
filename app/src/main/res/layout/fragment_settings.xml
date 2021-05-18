@@ -18,346 +18,345 @@
             android:text="Profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button3" />
+            android:id="@+id/profile_button" />
 
         <Button
             android:text="Grade and Language"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button6" />
+            android:id="@+id/gradeandlanguage_button" />
 
         <Button
             android:text="Visuals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button7" />
+            android:id="@+id/visuals_button" />
 
         <Button
             android:text="Support"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button8" />
+            android:id="@+id/support_button" />
 
         <Button
             android:text="About"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button9" />
+            android:id="@+id/about_button" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:visibility="visible"
-        android:visibility="visible"
-        android:id="@+id/profile_settings">
-
-        <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="300dp">
+            android:visibility="visible"
+            android:id="@+id/profile_settings">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="300dp">
 
             <TextView
-                android:text="Username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView2" />
+                    android:text="Username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"/>
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="@string/usernamePlaceholder"
-                android:ems="10"
-                android:id="@+id/editTextTextPersonName" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="@string/usernamePlaceholder"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonName"/>
 
             <TextView
-                android:text="@string/prompt_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3" />
+                    android:text="@string/prompt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"/>
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="@string/placeholderEmail"
-                android:ems="10"
-                android:id="@+id/editTextTextPersonName2" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="@string/placeholderEmail"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonName2"/>
 
             <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/positiveColor" />
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/positiveColor"/>
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="133dp">
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="133dp">
 
                 <ImageView
-                    android:layout_width="166dp"
-                    android:layout_height="wrap_content"
-                    tools:srcCompat="@tools:sample/avatars"
-                    android:id="@+id/imageView4"
-                    android:layout_weight="1" />
+                        android:layout_width="166dp"
+                        android:layout_height="wrap_content"
+                        tools:srcCompat="@tools:sample/avatars"
+                        android:id="@+id/imageView4"
+                        android:layout_weight="1"/>
 
                 <Button
-                    android:text="Change Image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button10"
-                    android:layout_weight="1" />
+                        android:text="Change Image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button10"
+                        android:layout_weight="1"/>
             </LinearLayout>
 
             <View
-                android:id="@+id/divider2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/positiveColor" />
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/positiveColor"/>
 
             <TextView
-                android:text="@string/prompt_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4" />
+                    android:text="@string/prompt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"/>
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="@string/passwordPlaceholder"
-                android:ems="10"
-                android:id="@+id/editTextTextPersonName3" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/passwordPlaceholder"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonName3"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/grade_and_language_settings"
-        tools:visibility="visible">
-
-        <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="225dp"
-            tools:layout_editor_absoluteX="145dp">
+            android:id="@+id/grade_and_language_settings"
+            android:visibility="gone">
 
-            <TextView
-                android:text="@string/languages"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView5" />
-
-            <LinearLayout
+        <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="213dp">
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteY="225dp"
+                tools:layout_editor_absoluteX="145dp">
 
-                <Button
-                    android:text="@string/english"
+            <TextView
+                    android:text="@string/languages"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button11" />
+                    android:id="@+id/textView5"/>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="213dp">
 
                 <Button
-                    android:text="@string/arabic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button12" />
+                        android:text="@string/english"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button11"/>
 
                 <Button
-                    android:text="@string/greek"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button13" />
+                        android:text="@string/arabic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button12"/>
 
                 <Button
-                    android:text="@string/turkish"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button14" />
+                        android:text="@string/greek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button13"/>
+
+                <Button
+                        android:text="@string/turkish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button14"/>
             </LinearLayout>
 
             <View
-                android:id="@+id/divider3"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/positiveColor" />
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/positiveColor"/>
 
             <TextView
-                android:text="Grades"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView10" />
+                    android:text="Grades"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10"/>
 
             <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <Button
+                        android:text="@string/grade7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button15"/>
+
+                <Button
+                        android:text="@string/grade8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button16"/>
+
+                <Button
+                        android:text="@string/grade9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button17"/>
+
+                <Button
+                        android:text="@string/grade10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button18"/>
+
+                <Button
+                        android:text="@string/grade11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button19"/>
+
+                <Button
+                        android:text="@string/grade12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button20"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/visuals_settings"
+            android:visibility="gone">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteY="280dp"
+                tools:layout_editor_absoluteX="127dp"
+                tools:visibility="visible">
+
+            <TextView
+                    android:text="Text Size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Set Text Size"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonName4"/>
+
+            <TextView
+                    android:text="Choose Light or Dark Theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView12"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:text="Light Theme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button21"
+                        android:layout_weight="1"/>
+
+                <Button
+                        android:text="Dark Theme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button22"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/support_settings"
+            android:visibility="gone">
+
+        <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:text="@string/grade7"
+            <TextView
+                    android:text="Lorem ipsum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button15" />
-
-                <Button
-                    android:text="@string/grade8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button16" />
-
-                <Button
-                    android:text="@string/grade9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button17" />
-
-                <Button
-                    android:text="@string/grade10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button18" />
-
-                <Button
-                    android:text="@string/grade11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button19" />
-
-                <Button
-                    android:text="@string/grade12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button20" />
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Visuals_settings"
-        tools:visibility="visible">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="280dp"
-            tools:layout_editor_absoluteX="127dp"
-            tools:visibility="visible">
+                    android:id="@+id/q1"
+                    android:textSize="30sp"/>
 
             <TextView
-                android:text="Text Size"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView11" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Set Text Size"
-                android:ems="10"
-                android:id="@+id/editTextTextPersonName4" />
-
-            <TextView
-                android:text="Choose Light or Dark Theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView12" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:text="Light Theme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button21"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:text="Dark Theme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button22"
-                    android:layout_weight="1" />
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/support_settings"
-        tools:visibility="visible">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:text="Lorem ipsum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/q1"
-                android:textSize="30sp" />
-
-            <TextView
-                android:text="dolor sit amet, consectetur adipiscing elit. Nunc nec justo mollis, sodales ex sed, rutrum libero. Proin eget venenatis arcu. Morbi non efficitur sem, sed gravida enim. Vivamus enim enim, sollicitudin sit amet porttitor porta, iaculis at nunc. Etiam non dolor nec est ultricies sagittis in eget erat. In pulvinar massa in turpis scelerisque interdum. Phasellus facilisis orci rhoncus blandit laoreet."
-                android:layout_width="match_parent"
-                android:layout_height="155dp"
-                android:id="@+id/a1"
-                tools:visibility="visible" />
+                    android:text="dolor sit amet, consectetur adipiscing elit. Nunc nec justo mollis, sodales ex sed, rutrum libero. Proin eget venenatis arcu. Morbi non efficitur sem, sed gravida enim. Vivamus enim enim, sollicitudin sit amet porttitor porta, iaculis at nunc. Etiam non dolor nec est ultricies sagittis in eget erat. In pulvinar massa in turpis scelerisque interdum. Phasellus facilisis orci rhoncus blandit laoreet."
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
+                    android:id="@+id/a1"
+                    tools:visibility="visible"/>
 
             <View
-                android:id="@+id/divider4"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/positiveColor" />
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/positiveColor"/>
 
             <TextView
-                android:text="Lorem ipsum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/q2"
-                android:textSize="30sp" />
+                    android:text="Lorem ipsum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q2"
+                    android:textSize="30sp"/>
 
             <TextView
-                android:text="Pellentesque quis mollis neque. Morbi aliquet scelerisque libero non tempus. Vestibulum eu malesuada dui, non placerat eros. In pharetra ullamcorper iaculis. Duis consequat eget turpis sed efficitur. Phasellus a efficitur quam. Morbi facilisis ac turpis at imperdiet. Curabitur vel est et lorem pulvinar pharetra. In hac habitasse platea dictumst."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/a2"
-                tools:visibility="visible" />
+                    android:text="Pellentesque quis mollis neque. Morbi aliquet scelerisque libero non tempus. Vestibulum eu malesuada dui, non placerat eros. In pharetra ullamcorper iaculis. Duis consequat eget turpis sed efficitur. Phasellus a efficitur quam. Morbi facilisis ac turpis at imperdiet. Curabitur vel est et lorem pulvinar pharetra. In hac habitasse platea dictumst."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/a2"
+                    tools:visibility="visible"/>
 
             <View
-                android:id="@+id/divider5"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/positiveColor" />
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/positiveColor"/>
 
             <TextView
-                android:text="Lorem ipsum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/q3"
-                android:textSize="30sp" />
+                    android:text="Lorem ipsum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q3"
+                    android:textSize="30sp"/>
 
             <TextView
-                android:text="Aenean sed eros nibh. Aliquam quis leo et sapien euismod tempus at ullamcorper dolor. Nam eget ante nec arcu sagittis pellentesque. Aenean sodales elit tellus, ac porta lacus molestie at. Sed dapibus sollicitudin interdum. Aliquam sit amet pretium mi. Donec vulputate sodales nulla. Pellentesque quis nunc ultricies, egestas velit at, pulvinar ipsum. "
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/a3" />
+                    android:text="Aenean sed eros nibh. Aliquam quis leo et sapien euismod tempus at ullamcorper dolor. Nam eget ante nec arcu sagittis pellentesque. Aenean sodales elit tellus, ac porta lacus molestie at. Sed dapibus sollicitudin interdum. Aliquam sit amet pretium mi. Donec vulputate sodales nulla. Pellentesque quis nunc ultricies, egestas velit at, pulvinar ipsum. "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/a3"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

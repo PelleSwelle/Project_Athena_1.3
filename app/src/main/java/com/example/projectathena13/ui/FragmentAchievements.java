@@ -40,14 +40,14 @@ public class FragmentAchievements extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
 
-        buttons = new ArrayList<Button>();
-        buttons.add(mathButton);
-        buttons.add(literacyButton);
-        buttons.add(arabicButton);
-        buttons.add(chemistryButton);
-        buttons.add(physicsButton);
-        buttons.add(bioButton);
-        buttons.add(historyButton);
+        //buttons = new ArrayList<Button>();
+        //buttons.add(mathButton);
+        //buttons.add(literacyButton);
+        //buttons.add(arabicButton);
+        //buttons.add(chemistryButton);
+        //buttons.add(physicsButton);
+        //buttons.add(bioButton);
+        //buttons.add(historyButton);
 
 
 
