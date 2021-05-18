@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
@@ -10,8 +9,7 @@
         android:id="@+id/nav_home"
         android:name="com.example.projectathena13.ui.FragmentHome"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home"
-    >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_nav_dashboard"
             app:destination="@id/nav_dashboard" />
@@ -39,71 +37,66 @@
         android:id="@+id/nav_dashboard"
         android:name="com.example.projectathena13.ui.FragmentDashboard"
         android:label="@string/menu_dashboard"
-        tools:layout="@layout/fragment_dashboard"
-    >
+        tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_nav_dashboard_to_nav_todo"
             app:destination="@id/nav_todo" />
     </fragment>
-<!--    <fragment-->
-<!--        android:id="@+id/nav_lessons"-->
-<!--        android:name="com.example.projectathena13.ui.viewmodels.lesson.LessonsFragment"-->
-<!--        android:label="Lessons"-->
-<!--        tools:layout="@layout/fragment_lessons"-->
-<!--    />-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_lessons"-->
+    <!--        android:name="com.example.projectathena13.ui.viewmodels.lesson.LessonsFragment"-->
+    <!--        android:label="Lessons"-->
+    <!--        tools:layout="@layout/fragment_lessons"-->
+    <!--    />-->
     <fragment
         android:id="@+id/nav_lessons"
         android:name="com.example.projectathena13.ui.FragmentLessons"
         android:label="Lessons"
-        tools:layout="@layout/fragment_lessons"
-    />
+
+        tools:layout="@layout/fragment_lessons" />
 
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_gallery"-->
-<!--        android:name="com.example.projectathena13.ui.gallery.GalleryFragment"-->
-<!--        android:label="@string/menu_gallery"-->
-<!--        tools:layout="@layout/fragment_gallery"-->
-<!--    />-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_gallery"-->
+    <!--        android:name="com.example.projectathena13.ui.gallery.GalleryFragment"-->
+    <!--        android:label="@string/menu_gallery"-->
+    <!--        tools:layout="@layout/fragment_gallery"-->
+    <!--    />-->
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_slideshow"-->
-<!--        android:name="com.example.projectathena13.ui.slideshow.SlideshowFragment"-->
-<!--        android:label="@string/menu_slideshow"-->
-<!--        tools:layout="@layout/fragment_slideshow"-->
-<!--    />-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_slideshow"-->
+    <!--        android:name="com.example.projectathena13.ui.slideshow.SlideshowFragment"-->
+    <!--        android:label="@string/menu_slideshow"-->
+    <!--        tools:layout="@layout/fragment_slideshow"-->
+    <!--    />-->
     <fragment
         android:id="@+id/nav_achievements"
         android:name="com.example.projectathena13.ui.FragmentAchievements"
         android:label="Achievements"
-        tools:layout="@layout/fragment_achievements"
-    />
+        tools:layout="@layout/fragment_achievements" />
 
     <fragment
-            android:id="@+id/nav_city"
-            android:name="com.example.projectathena13.ui.FragmentCity"
-            android:label="City"
-            tools:layout="@layout/fragment_city"
-    />
+        android:id="@+id/nav_city"
+        android:name="com.example.projectathena13.ui.FragmentCity"
+        android:label="City"
+        tools:layout="@layout/fragment_city" />
 
     <fragment
-                android:id="@+id/nav_languages"
-                android:name="com.example.projectathena13.ui.FragmentLanguages"
-                android:label="Languages"
-                tools:layout="@layout/fragment_languages"
-    />
+        android:id="@+id/nav_languages"
+        android:name="com.example.projectathena13.ui.FragmentLanguages"
+        android:label="Languages"
+        tools:layout="@layout/fragment_languages" />
     <fragment
-                android:id="@+id/nav_todo"
-                android:name="com.example.projectathena13.ui.FragmentToDo"
-                android:label="To Do"
-                tools:layout="@layout/fragment_todo"
-    />
+        android:id="@+id/nav_todo"
+        android:name="com.example.projectathena13.ui.FragmentToDo"
+        android:label="To Do"
+        tools:layout="@layout/fragment_todo" />
 
     <fragment
-                android:id="@+id/nav_mathematics"
-                android:name="com.example.projectathena13.ui.FragmentMathematics"
-                android:label="Mathematics"
-                tools:layout="@layout/fragment_mathematics">
+        android:id="@+id/nav_mathematics"
+        android:name="com.example.projectathena13.ui.FragmentMathematics"
+        android:label="Mathematics"
+        tools:layout="@layout/fragment_mathematics">
         <action
             android:id="@+id/action_nav_mathematics_to_nav_lessons"
             app:destination="@id/nav_lessons">
@@ -111,8 +104,7 @@
             <argument
                 android:name="moduleName"
                 app:argType="string"
-                android:defaultValue="null"
-            />
+                android:defaultValue="null" />
 
         </action>
 
@@ -120,11 +112,10 @@
     </fragment>
 
     <fragment
-                android:id="@+id/nav_literacy"
-                android:name="com.example.projectathena13.ui.FragmentLiteracy"
-                android:label="Literacy"
-                tools:layout="@layout/fragment_literacy"
-    >
+        android:id="@+id/nav_literacy"
+        android:name="com.example.projectathena13.ui.FragmentLiteracy"
+        android:label="Literacy"
+        tools:layout="@layout/fragment_literacy">
         <action
             android:id="@+id/action_nav_literacy_to_nav_math1lessons"
             app:destination="@id/nav_lessons" />
