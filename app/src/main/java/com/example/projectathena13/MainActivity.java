@@ -1,6 +1,7 @@
 package com.example.projectathena13;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -21,19 +22,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import java.util.zip.Inflater;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
-    public AppBarConfiguration getmAppBarConfiguration()
-    {
+    public AppBarConfiguration getmAppBarConfiguration() {
         return mAppBarConfiguration;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -43,31 +41,31 @@ public class MainActivity extends AppCompatActivity
 
         PopupMenu popMenu = new PopupMenu(MainActivity.this, fab);
 
-        fab.setOnClickListener(new View.OnClickListener()
-        {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
 
                 popMenu.getMenuInflater().inflate(R.menu.fab_menu, popMenu.getMenu());
 
-                popMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener()
-                {
+                popMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
-                    public boolean onMenuItemClick(MenuItem _item)
-                    {
+                    public boolean onMenuItemClick(MenuItem _item) {
                         // TODO what happens with each menu option
                         switch (_item.getItemId()) {
                             case R.id.fab_dashboard:
+                                Log.d("FAB", "onMenuItemClick: fab_dashboard");
+                                Navigation.findNavController(MainActivity.this, R.id.nav_host_fragment).navigate(R.id.nav_dashboard);
                                 Toast.makeText(MainActivity.this, "dashboard", Toast.LENGTH_SHORT).show();
-                                //TODO fab go to dashboard
+                                break;
+                            //TODO fab go to dashboard
                             case R.id.fab_city:
+                                Log.d("FAB", "onMenuItemClick: fab_city");
+                                Navigation.findNavController(MainActivity.this, R.id.nav_host_fragment).navigate(R.id.nav_city);
                                 Toast.makeText(MainActivity.this, "City", Toast.LENGTH_SHORT).show();
+                                break;
                         }
 
-
-
-                        return false;
+                        return true;
                     }
                 });
                 popMenu.show();
@@ -96,12 +94,12 @@ public class MainActivity extends AppCompatActivity
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        // settings menu
+        getMenuInflater().inflate(R.menu.main, menu);
 
         return true;
     }
@@ -114,13 +112,14 @@ public class MainActivity extends AppCompatActivity
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_settings);
 
             case R.id.action_logOut:
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_home);
         }
+        Log.d("TAG", "onOptionsItemSelected: " + item.toString());
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    public boolean onSupportNavigateUp()
-    {
+    public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
