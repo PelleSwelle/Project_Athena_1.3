@@ -9,7 +9,7 @@
         android:textSize="36sp"/>
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="324dp" app:srcCompat="@drawable/logo_mock_up" android:id="@+id/welcome_logo"/>
+        android:layout_height="324dp" app:srcCompat="@drawable/logo_main" android:id="@+id/welcome_logo"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

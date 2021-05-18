@@ -2,16 +2,18 @@ package com.example.projectathena13;
 
 // TODO lighter hue of module color, darker the further you get.
 
+import android.graphics.drawable.Drawable;
+
 import java.io.File;
 import java.util.ArrayList;
 
 public class Lesson
 {
-
     private String title;
 
     private ArrayList<Material> materials;
     private boolean isFinished;
+
 
     public Lesson(String _title) {
         this.title = _title;
@@ -23,7 +25,6 @@ public class Lesson
     public String getTitle() {
         return this.title;
     }
-
     public void setTitle(String _title) {
         this.title = _title;
     }
@@ -33,7 +34,6 @@ public class Lesson
     {
         return materials;
     }
-
     public void setMaterials(ArrayList materials)
     {
         this.materials = materials;
@@ -43,12 +43,12 @@ public class Lesson
     public boolean getFinished() {
         return isFinished;
     }
-
     public void setFinished(Boolean _finished) {
         isFinished = _finished;
     }
 
-
+    public class resource {
+    }
 }
 
 

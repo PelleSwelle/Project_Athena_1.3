@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pargment"
+    android:background="@drawable/backgorund_pargment"
     tools:context="LessonPopUp"
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -15,7 +15,7 @@
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="36dp"
-        android:src="@drawable/exit"
+        android:src="@drawable/icon_exit"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintEnd_toEndOf="parent" />
 

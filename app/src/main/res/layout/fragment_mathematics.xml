@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.mathematics.MathematicsFragment"
-    android:background="@drawable/map_1_mat">
+    tools:context=".ui.FragmentMathematics"
+    android:background="@drawable/background_map_math">
 <ListView
     android:id="@+id/lv_math_modules"
     android:layout_width="match_parent"
