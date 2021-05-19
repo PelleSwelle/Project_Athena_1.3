@@ -98,10 +98,10 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
 //                "Lesson 3", 3,
 //                R.color.finished);
 
-        for (Object _material : lesson.getMaterials())
-        {
-
-        }
+//        for (Object _material : lesson.getMaterials())
+//        {
+//
+//        }
         viewHolder.pieChart.addPieSlice(new PieModel("something", 1, Color.parseColor("#232629")));
 
         viewHolder.pieChart.addPieSlice(

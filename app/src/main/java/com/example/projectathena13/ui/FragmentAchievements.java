@@ -1,6 +1,7 @@
 package com.example.projectathena13.ui;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,22 +42,6 @@ public class FragmentAchievements extends Fragment
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-
-        //buttons = new ArrayList<Button>();
-        //buttons.add(mathButton);
-        //buttons.add(literacyButton);
-        //buttons.add(arabicButton);
-        //buttons.add(chemistryButton);
-        //buttons.add(physicsButton);
-        //buttons.add(bioButton);
-        //buttons.add(historyButton);
-
-
-
-//        achievementsViewModel = new ViewModelProvider(this).get(AchievementsViewModel.class);
-
-
-
         View root = inflater.inflate(R.layout.fragment_achievements, container, false);
 
 
@@ -91,6 +76,9 @@ public class FragmentAchievements extends Fragment
         literacyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                literacyButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
+                mathButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+
                 if (literacyConstraint.getVisibility() == View.GONE)
                 {
                     literacyConstraint.setVisibility(View.VISIBLE);
@@ -104,6 +92,8 @@ public class FragmentAchievements extends Fragment
         mathButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                literacyButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                mathButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
                 if (mathConstraint.getVisibility() == View.GONE)
                 {
                     mathConstraint.setVisibility(View.VISIBLE);
@@ -126,4 +116,6 @@ public class FragmentAchievements extends Fragment
 
         return root;
     }
+
+
 }

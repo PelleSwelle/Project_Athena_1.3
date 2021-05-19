@@ -78,7 +78,7 @@
     <fragment
         android:id="@+id/nav_mathematics"
         android:name="com.example.projectathena13.ui.FragmentMathematics"
-        android:label="Mathematics"
+        android:label="Mathematics Modules"
         tools:layout="@layout/fragment_mathematics">
 
 
@@ -87,7 +87,7 @@
     <fragment
         android:id="@+id/nav_literacy"
         android:name="com.example.projectathena13.ui.FragmentLiteracy"
-        android:label="Literacy"
+        android:label="Literacy Modules"
         tools:layout="@layout/fragment_literacy">
     </fragment>
 
