@@ -71,7 +71,9 @@ public class FragmentLessons extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView textView = (TextView) view;
-                textView.setTextColor(getResources().getColor(R.color.doneColor));
+
+                textView.setTextColor(getResources().getColor(R.color.hoverBlue));
+
                 user.addLiteracy(2);
             }
         });
@@ -87,7 +89,7 @@ public class FragmentLessons extends Fragment {
 
                 popWindow.showAtLocation(lv_pieChart, Gravity.CENTER, 0, 0);
                 popWindow.setBackgroundDrawable(popWindow.getBackground());
-<<<<<<< HEAD
+
                 popWindow.getContentView().findViewById(R.id.tv_material1).setOnClickListener(new View.OnClickListener() {
 //                    @Override
                     public void onClick(View v) {
@@ -113,8 +115,7 @@ public class FragmentLessons extends Fragment {
                     }
                 });
 
-=======
->>>>>>> point_system
+
 
                 // set title of lesson
                 TextView tv_lessonTitle = popWindow.getContentView().findViewById(R.id.tv_lessonTitle);
