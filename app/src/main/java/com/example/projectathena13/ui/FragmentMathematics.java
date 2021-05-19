@@ -48,61 +48,64 @@ public class FragmentMathematics extends Fragment
 
         // MULITPLICATION
             multiplicationLessons = new ArrayList<Lesson>();
-            multiplicationLessons.add(new Lesson("Multiplying 2-digit numbers by 2-digit numbers"));
-            multiplicationLessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
-            multiplicationLessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
+            multiplicationLessons.add(new Lesson("Multiplication 1",
+                    "Multiplying 2-digit numbers by 2-digit numbers"));
+            multiplicationLessons.add(new Lesson("Multiplication 2",
+                    "Multiplying 4-digit numbers by 3-digit numbers"));
+            multiplicationLessons.add(new Lesson("Multiplication 3",
+                    "Multiplying 4-digit numbers by 3-digit numbers"));
         modules.add(new Module("Multiplication", multiplicationLessons));
 
         // DIVISION / REPEAT SUBTRACTION
             divisionRepeatSubtractionLessons = new ArrayList<Lesson>();
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction with divisors less than 20 with no remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction by multiples of 10 with divisors less than 20 with no remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction by multiples of 2, 3 and 4 with divisors greater than 20 with no remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction by multiples of 1,2 and 3 with divisors less than 20 with remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction by multiples of 10 with divisors less than 20 with remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction with divisors greater than 20 with remainders as fractions"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction with divisors less than 35 with some remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction with divisors less than 55 with dividends of 3 and 4-digits with some remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Repeated subtraction with divisors greater than 50 with dividends of thousands and some remainders"));
-            divisionRepeatSubtractionLessons.add(new Lesson("Using divide, multiply and subtraction in the bring down method"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 1","Repeated subtraction with divisors less than 20 with no remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 2","Repeated subtraction by multiples of 10 with divisors less than 20 with no remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 3","Repeated subtraction by multiples of 2, 3 and 4 with divisors greater than 20 with no remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 4","Repeated subtraction by multiples of 1,2 and 3 with divisors less than 20 with remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 5","Repeated subtraction by multiples of 10 with divisors less than 20 with remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 6","Repeated subtraction with divisors greater than 20 with remainders as fractions"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 7","Repeated subtraction with divisors less than 35 with some remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 8","Repeated subtraction with divisors less than 55 with dividends of 3 and 4-digits with some remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 9","Repeated subtraction with divisors greater than 50 with dividends of thousands and some remainders"));
+            divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 10","Using divide, multiply and subtraction in the bring down method"));
         modules.add(new Module("Division/repeat subtraction", divisionRepeatSubtractionLessons));
 
         // DECIMALS
             decimalsLessons = new ArrayList<Lesson>();
-            decimalsLessons.add(new Lesson("Rounding decimals"));
-            decimalsLessons.add(new Lesson("Decimals to three decimal places"));
-            decimalsLessons.add(new Lesson("Adding decimals with a different number of decimal places"));
-            decimalsLessons.add(new Lesson("Subtracting decimals with a different number of places"));
-            decimalsLessons.add(new Lesson("Multiplying decimals by 10, 100 and 1000"));
-            decimalsLessons.add(new Lesson("Multiplying decimals by whole numbers"));
-            decimalsLessons.add(new Lesson("Dividing decimals by 10, 100 and 1000"));
-            decimalsLessons.add(new Lesson("Dividing decimal fractions by whole numbers"));
-            decimalsLessons.add(new Lesson("Dividing numbers by a decimal fraction"));
+            decimalsLessons.add(new Lesson("Decimals 1", "Rounding decimals"));
+            decimalsLessons.add(new Lesson("Decimals 2", "Decimals to three decimal places"));
+            decimalsLessons.add(new Lesson("Decimals 3", "Adding decimals with a different number of decimal places"));
+            decimalsLessons.add(new Lesson("Decimals 4", "Subtracting decimals with a different number of places"));
+            decimalsLessons.add(new Lesson("Decimals 5", "Multiplying decimals by 10, 100 and 1000"));
+            decimalsLessons.add(new Lesson("Decimals 6", "Multiplying decimals by whole numbers"));
+            decimalsLessons.add(new Lesson("Decimals 7", "Dividing decimals by 10, 100 and 1000"));
+            decimalsLessons.add(new Lesson("Decimals 8", "Dividing decimal fractions by whole numbers"));
+            decimalsLessons.add(new Lesson("Decimals 9", "Dividing numbers by a decimal fraction"));
         modules.add(new Module("Decimals", decimalsLessons));
 
         // PERCENTAGES
             percentagesLessons = new ArrayList<Lesson>();
-            percentagesLessons.add(new Lesson("Changing fractions and decimals to percentages using tenths and hundredths"));
-            percentagesLessons.add(new Lesson("Changing percentages to fractions and decimals"));
-            percentagesLessons.add(new Lesson("One quantity as a percentage of another"));
-            percentagesLessons.add(new Lesson("Calculating Percentages and Fractions of Quantities"));
+            percentagesLessons.add(new Lesson("Percentages 1","Changing fractions and decimals to percentages using tenths and hundredths"));
+            percentagesLessons.add(new Lesson("Percentages 2","Changing percentages to fractions and decimals"));
+            percentagesLessons.add(new Lesson("Percentages 3","One quantity as a percentage of another"));
+            percentagesLessons.add(new Lesson("Percentages 4","Calculating Percentages and Fractions of Quantities"));
         modules.add(new Module("Percentages", percentagesLessons));
 
         // FRACTIONS
             fractionsLessons = new ArrayList<Lesson>();
-            fractionsLessons.add(new Lesson("Adding and subtracting fractions with the same denominator"));
-            fractionsLessons.add(new Lesson("Improper fractions"));
-            fractionsLessons.add(new Lesson("Comparing and ordering fractions greater than (>) 1"));
-            fractionsLessons.add(new Lesson("Adding and subtracting fractions with different denominators"));
-            fractionsLessons.add(new Lesson("Multiplying fractions by whole numbers"));
-            fractionsLessons.add(new Lesson("Fractions of whole numbers"));
-            fractionsLessons.add(new Lesson("Multiplying and dividing to obtain equivalent fractions"));
-            fractionsLessons.add(new Lesson("Reducing fractions to lowest equivalent form"));
-            fractionsLessons.add(new Lesson("Finding reciprocals of fractions and mixed numbers (mixed numerals)"));
-            fractionsLessons.add(new Lesson("Dividing fractions"));
-            fractionsLessons.add(new Lesson("Dividing mixed numbers (mixed numerals)"));
-            fractionsLessons.add(new Lesson("Multiplying fractions"));
-            fractionsLessons.add(new Lesson("Multiplying mixed numbers (mixed numerals)"));
+            fractionsLessons.add(new Lesson("Fractions 1","Adding and subtracting fractions with the same denominator"));
+            fractionsLessons.add(new Lesson("Fractions 2","Improper fractions"));
+            fractionsLessons.add(new Lesson("Fractions 3","Comparing and ordering fractions greater than (>) 1"));
+            fractionsLessons.add(new Lesson("Fractions 4","Adding and subtracting fractions with different denominators"));
+            fractionsLessons.add(new Lesson("Fractions 5","Multiplying fractions by whole numbers"));
+            fractionsLessons.add(new Lesson("Fractions 6","Fractions of whole numbers"));
+            fractionsLessons.add(new Lesson("Fractions 7","Multiplying and dividing to obtain equivalent fractions"));
+            fractionsLessons.add(new Lesson("Fractions 8","Reducing fractions to lowest equivalent form"));
+            fractionsLessons.add(new Lesson("Fractions 9","Finding reciprocals of fractions and mixed numbers (mixed numerals)"));
+            fractionsLessons.add(new Lesson("Fractions 10","Dividing fractions"));
+            fractionsLessons.add(new Lesson("Fractions 11","Dividing mixed numbers (mixed numerals)"));
+            fractionsLessons.add(new Lesson("Fractions 12","Multiplying fractions"));
+            fractionsLessons.add(new Lesson("Fractions 13","Multiplying mixed numbers (mixed numerals)"));
         modules.add(new Module("Fractions", fractionsLessons));
 
         View root = inflater.inflate(R.layout.fragment_mathematics, container, false);

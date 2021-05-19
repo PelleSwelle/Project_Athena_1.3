@@ -7,42 +7,42 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.navigation.Navigation;
-import org.eazegraph.lib.charts.PieChart;
-import org.eazegraph.lib.models.PieModel;
 
 import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
 
-// TODO probably make this extend recyclerView instead. ArrayAdapter is for ListView, recyclerView is for recyclerView
-public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClickListener {
 
-    private ArrayList<Module> modules;
+public class Adapter_Materials extends ArrayAdapter<Material> implements View.OnClickListener {
+
+    private ArrayList<Material> materials;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
 
     Context mContext;
-    public static ArrayList lessonsToBeSent;
+    public static ArrayList materialsToBeSent;
 
     // represents the linear layout holding the text- and imageView
     private static class ViewHolder {
-        TextView tv_title;
-        PieChart pieChart;
+        TextView tv_lessonTitle;
+        TextView tv_description;
+        TextView tv_materialName;
+        ImageView iv_tickmark;
     }
 
 
     // constructor
-    public Adapter_Modules(ArrayList<Module> _modules, Context _context) {
-        super(_context, R.layout.pie, _modules);
+    public Adapter_Materials(ArrayList<Material> materials, Context _context) {
+        super(_context, R.layout.material_item, materials);
 
-        this.modules = _modules;
+        this.materials = materials;
         this.mContext = _context;
     }
 
-    // TODO on of 2 onClicks
     public void onClick(View _view) {
     }
 
@@ -51,7 +51,7 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
     public View getView(int _position, View _convertView, ViewGroup _parent) {
 
         // get the data item for this position
-        Module module = getItem(_position);
+        Lesson lesson = getItem(_position);
 
         // check if an existing view is being reused, otherwise inflate the view
         ViewHolder viewHolder; // view lookup cache stored in tag
@@ -63,9 +63,8 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
             LayoutInflater inflater = LayoutInflater.from(getContext());
 
 
-            _convertView = inflater.inflate(R.layout.pie, _parent, false);
-            viewHolder.tv_title = (TextView) _convertView.findViewById(R.id.tv_title);
-            viewHolder.pieChart = (PieChart) _convertView.findViewById(R.id.piechart);
+            _convertView = inflater.inflate(R.layout.material_item, _parent, false);
+            viewHolder.tv_materialName = (TextView) _convertView.findViewById(R.id.tv_materialTitle);
 
             result = _convertView;
             Log.d(TAG, "ViewHolder: " + viewHolder.toString());
@@ -80,39 +79,9 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
             result = _convertView;
         }
 
-//        Animation animation = AnimationUtils.loadAnimation(mContext, (_position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
-//        result.startAnimation(animation);
-//        lastPosition = _position;
-
-        // TODO color according to whether it is done or not.
-
-//        PieModel donePie = new PieModel(
-//                "Lesson 2", 3,
-//                R.color.notFinished);
-
-//        PieModel notDonePie = new PieModel(
-//                "Lesson 3", 3,
-//                R.color.finished);
-
-        for (Lesson _lesson : module.getLessons()) {
-            if (_lesson.getFinished()) {
-                viewHolder.pieChart.addPieSlice(new PieModel(_lesson.getTitle(), module.getLessons().size(), R.color.design_default_color_background));
-            } else {
-                viewHolder.pieChart.addPieSlice(new PieModel(_lesson.getTitle(), module.getLessons().size(), R.color.design_default_color_error));
-            }
-        }
-        viewHolder.pieChart.addPieSlice(new PieModel("something", 1, Color.parseColor("#232629")));
-
-        viewHolder.pieChart.addPieSlice(
-                new PieModel("Lesson 2", 2, Color.parseColor("#3daee9")));
-        viewHolder.pieChart.addPieSlice(
-                new PieModel("Lesson 3", 1, Color.parseColor("#232629")));
-
-        viewHolder.pieChart.startAnimation();
-        viewHolder.tv_title.setText(module.getTitle());
+        viewHolder.tv_materialName.setText(lesson.getTitle());
 
         _convertView.setOnClickListener(new View.OnClickListener() {
-            // TODO 2nd of 2 onClicks
             @Override
             public void onClick(View _view) {
 //                int position = (Integer) _view.getTag();
@@ -125,7 +94,7 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
 
                     @Override
                     public void onClick(View v) {
-                        lessonsToBeSent = module.getLessons();
+                        materialsToBeSent = lesson.getMaterials();
                         Navigation.findNavController(_view).navigate(R.id.nav_lessons);
                     }
                 });

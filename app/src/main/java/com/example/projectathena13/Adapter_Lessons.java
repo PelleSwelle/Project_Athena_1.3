@@ -50,7 +50,6 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
 
     public View getView(int _position, View _convertView, ViewGroup _parent)
     {
-
         // get the data item for this position
         Lesson lesson = getItem(_position);
 

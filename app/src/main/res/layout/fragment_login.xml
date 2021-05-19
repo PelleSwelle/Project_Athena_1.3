@@ -16,7 +16,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="324dp"
-        app:srcCompat="@drawable/logo_main"
+        app:srcCompat="@drawable/logo_3_gradient"
         android:id="@+id/welcome_logo" />
 
     <LinearLayout
@@ -38,10 +38,10 @@
             android:inputType="textPassword"
             android:hint="@string/enter_password"
             android:ems="10" />
-        <Button android:id="@+id/bt_enter"
+        <Button android:id="@+id/bt_signIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Enter"/>
+            android:text="Sign in"/>
     </LinearLayout>
 </LinearLayout>

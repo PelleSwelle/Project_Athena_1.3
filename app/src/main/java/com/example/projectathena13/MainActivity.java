@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.PopupMenu;
-import com.example.projectathena13.ui.FragmentHome;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,
+                R.id.nav_login,
                 R.id.nav_dashboard,
                 R.id.nav_city,
                 R.id.nav_todo,
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_settings);
 
             case R.id.action_logOut:
-                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_home);
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_login);
         }
         Log.d("TAG", "onOptionsItemSelected: " + item.toString());
         return super.onOptionsItemSelected(item);

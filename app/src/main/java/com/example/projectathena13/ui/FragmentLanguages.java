@@ -1,5 +1,6 @@
 package com.example.projectathena13.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +9,16 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import com.example.projectathena13.MainActivity;
 import com.example.projectathena13.R;
+import com.google.android.material.navigation.NavigationView;
+import androidx.navigation.NavController;
 
 import java.util.ArrayList;
 
-public class FragmentLanguages extends Fragment
-{
+public class FragmentLanguages extends Fragment {
     View root;
 
     ArrayList<Button> buttons;
@@ -24,8 +29,7 @@ public class FragmentLanguages extends Fragment
 
 //    private LanguagesViewModel languagesViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        languagesViewModel = new ViewModelProvider(this).get(LanguagesViewModel.class);
 
         root = inflater.inflate(R.layout.fragment_languages, container, false);
@@ -41,14 +45,12 @@ public class FragmentLanguages extends Fragment
         buttons.add(arabic);
         buttons.add(greek);
 
-        for (Button _button: buttons)
-        {
-            _button.setOnClickListener(new View.OnClickListener()
-            {
+        for (Button _button : buttons) {
+            _button.setOnClickListener(new View.OnClickListener() {
+
                 @Override
-                public void onClick(View v)
-                {
-                    Toast.makeText(_button.getContext(), "you chose " + _button.getText(), Toast.LENGTH_SHORT).show();
+                public void onClick(View v) {
+                    Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_login);
                 }
             });
         }
