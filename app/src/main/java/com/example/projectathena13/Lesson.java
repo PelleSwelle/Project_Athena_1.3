@@ -31,10 +31,11 @@ public class Lesson {
         this.isFinished = false;
         this.description = description;
 
-        this.materials = new ArrayList<String>();
-        this.materials.add("material 1");
-        this.materials.add("material 2");
-        this.materials.add("Homework");
+//        this.materials = new ArrayList<String>();
+//        this.materials.add("material 1");
+//        this.materials.add("material 2");
+//        this.materials.add("Homework");
+//        this.materials.add("Quiz");
     }
 
 

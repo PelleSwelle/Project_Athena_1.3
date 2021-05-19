@@ -28,6 +28,7 @@ public class FragmentLessons extends Fragment {
     ListView pieList;
     private Adapter_Lessons adapter;
     private ArrayAdapter materialsAdapter;
+    ImageView iv_exitCross;
 
 
 
@@ -64,9 +65,12 @@ public class FragmentLessons extends Fragment {
         materials.add("material 1");
         materials.add("material 2");
         materials.add("Homework");
+        materials.add("Quiz");
 
         materialsAdapter = new ArrayAdapter<String>(root.getContext(), R.layout.material_item, materials);
         lv_materials.setAdapter(materialsAdapter);
+
+
 
         lv_materials.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -124,12 +128,20 @@ public class FragmentLessons extends Fragment {
                 // set description for lesson
                 TextView tv_lessonDescription = popWindow.getContentView().findViewById(R.id.tv_lessonDescription);
                 tv_lessonDescription.setText(adapter.getItem(position).getDescription());
+                iv_exitCross = popWindow.getContentView().findViewById(R.id.iv_cross);
 //
 //                        // TODO this should happen when all are clicked.
 //                        // TODO find out if getting math or literacy points.
 ////                        user.addliteracy();
 //                    }
 //                });
+
+                iv_exitCross.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        popWindow.dismiss();
+                    }
+                });
             }
         });
 
