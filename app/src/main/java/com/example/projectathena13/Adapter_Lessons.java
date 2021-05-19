@@ -43,23 +43,7 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
 
 
     public void onClick(View _view) {
-//        int position = (Integer) _view.getTag();
-//        Object object = getItem(position);
-//        Lesson lesson = (Lesson) object;
-//
-//        switch (_view.getId())
-//        {
-//            case R.id.tv_title:
-//                Snackbar.make(_view, "this is title", Snackbar.LENGTH_LONG);
-//
-////                mContext.startActivity(new Intent(mContext, LessonsActivity.class));
-//
-//                break;
-//
-//            case R.id.piechart:
-//                Snackbar.make(_view, "this is pie chart", Snackbar.LENGTH_LONG);
-//                break;
-//        }
+
     }
 
     private int lastPosition = -1;

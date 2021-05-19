@@ -27,32 +27,7 @@ public class LessonPopUp extends PopupWindow {
 
         View root = inflater.inflate(R.layout.lesson_popup, container, false);
 
-//        tv_material1 = (TextView) root.findViewById(R.id.tv_material1);
-//        tv_material1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d(TAG, context.toString());
-//                Toast.makeText(context, "Hello World",Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//        tv_material2 = (TextView) root.findViewById(R.id.tv_material2);
-//        tv_material2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(tv_material2.getContext(), "not implemented yet", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//        tv_homework = (TextView) root.findViewById(R.id.tv_homework);
-//        tv_homework.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(tv_material2.getContext(), "not implemented yet", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-
+        boolean finished = false;
 
         return root;
     }

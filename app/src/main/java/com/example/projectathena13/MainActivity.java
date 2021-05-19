@@ -1,16 +1,19 @@
 package com.example.projectathena13;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.PopupMenu;
-import androidx.fragment.app.FragmentManager;
-import androidx.navigation.fragment.NavHostFragment;
+import com.example.projectathena13.ui.FragmentHome;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -20,11 +23,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.util.zip.Inflater;
-
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+
+    public static NavigationView navigationView;
+    View nav_header;
+    TextView navHeaderUsername;
+    TextView navHeaderEmail;
+    EditText et_userName;
+    EditText et_password;
+    Button bt_enter;
+
+    public static User user;
 
     public AppBarConfiguration getmAppBarConfiguration() {
         return mAppBarConfiguration;
@@ -38,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         NavController navController1 = new NavController(this);
+
+        navigationView = findViewById(R.id.nav_view);
+        nav_header = navigationView.getHeaderView(0);
 
         PopupMenu popMenu = new PopupMenu(MainActivity.this, fab);
 
@@ -74,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -89,9 +102,21 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_literacy
         ).setOpenableLayout(drawer).build();
 
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
 

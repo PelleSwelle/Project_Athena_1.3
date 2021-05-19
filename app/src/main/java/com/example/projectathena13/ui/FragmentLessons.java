@@ -11,10 +11,12 @@ import com.example.projectathena13.*;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import org.eazegraph.lib.charts.PieChart;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
+import static com.example.projectathena13.MainActivity.user;
 
 public class FragmentLessons extends Fragment {
 //    private LessonsViewModel lessonsViewModel;
@@ -35,12 +37,7 @@ public class FragmentLessons extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        lessonsViewModel = new ViewModelProvider(this).get(LessonsViewModel.class);
-
-//        lessons = new ArrayList<Lesson>();
-//        lessons.add(new Lesson("Multiplying 2-digit numbers by 2-digit numbers"));
-//        lessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
-//        lessons.add(new Lesson("Multiplying 4-digit numbers by 3-digit numbers"));
+//        
         context = this.context;
 
 
@@ -56,8 +53,13 @@ public class FragmentLessons extends Fragment {
         adapter = new Adapter_Lessons(lessons, getContext());
 
         popWindow = new PopupWindow(inflater.inflate(R.layout.lesson_popup, null, false), 1200, 2000, true);
+        TextView tv_material1 = popWindow.getContentView().findViewById(R.id.tv_material1);
+        TextView tv_material2 = popWindow.getContentView().findViewById(R.id.tv_material2);
+        TextView tv_homeWork = popWindow.getContentView().findViewById(R.id.tv_homework);
 
         ImageView iv_exit = root.findViewById(R.id.exitCross);
+
+
 
 
         lv_pieChart.setAdapter(adapter);
@@ -66,31 +68,32 @@ public class FragmentLessons extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(TAG, "onItemClick: popUp menu open");
+                // TODO open a toast saying: "Downloading..."
 
                 popWindow.showAtLocation(lv_pieChart, Gravity.CENTER, 0, 0);
                 popWindow.setBackgroundDrawable(popWindow.getBackground());
                 popWindow.getContentView().findViewById(R.id.tv_material1).setOnClickListener(new View.OnClickListener() {
-                    @Override
+//                    @Override
                     public void onClick(View v) {
+                        tv_material1.setTextColor(getResources().getColor(R.color.doneColor));
 
-                        Log.d(TAG, "onClick: material 1");
-                        // TODO open a toast saying: "Downloading..."
+                        // TODO this should happen when all are clicked.
+                        // TODO find out if getting math or literacy points.
+//                        user.addliteracy();
                     }
                 });
                 popWindow.getContentView().findViewById(R.id.tv_material2).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        tv_material2.setTextColor(getResources().getColor(R.color.doneColor));
                         Log.d(TAG, "onClick: material 2");
-                        // TODO open a toast saying: "Downloading..."
                     }
                 });
                 popWindow.getContentView().findViewById(R.id.tv_homework).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        tv_homeWork.setTextColor(getResources().getColor(R.color.doneColor));
                         Log.d(TAG, "onClick: homework");
-                        // TODO open a toast saying: "Downloading..."
                     }
                 });
 

@@ -16,11 +16,11 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="36dp"
         android:src="@drawable/icon_exit"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintBottom_toTopOf="@+id/materialsHeader"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/materialsHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
@@ -43,7 +43,7 @@
 
         android:text="material 1.pdf"
         android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/materialsHeader"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView

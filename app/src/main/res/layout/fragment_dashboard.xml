@@ -30,7 +30,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <TextView android:id="@+id/tv_username"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="@string/usernamePlaceholder"
@@ -46,7 +46,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:src="@drawable/icon_globe" />
+                    android:src="@drawable/resource_math"/>
+
+                <TextView android:id="@+id/tv_mathPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/resource_literacy"/>
+
+                <TextView android:id="@+id/tv_literacyPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/resource_coin"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -58,31 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:src="@drawable/icon_calculator" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/resourceAmountPlaceholder" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/icon_map" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/resourceAmountPlaceholder" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/icon_network" />
+                    android:src="@drawable/resource_potion" />
 
                 <TextView
                     android:layout_width="match_parent"
