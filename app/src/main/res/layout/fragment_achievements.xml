@@ -8,10 +8,10 @@
     android:orientation="vertical">
 
     <TextView android:id="@+id/tv_recentAchievements"
-        android:text="@string/recent_achievements"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         />
+              android:text="@string/latest_achievements"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textStyle="bold" android:textSize="18sp" android:textColor="@color/iconYellow"/>
 
     <LinearLayout
             android:orientation="horizontal"
@@ -77,16 +77,17 @@
     </LinearLayout>
 
     <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/positiveColor" />
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/iconYellow"/>
 
     <TextView
-        android:text="All Achievements"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView9" />
+            android:text="@string/all_achievements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" android:textStyle="bold" android:textSize="18sp"
+            android:textColor="@color/iconYellow"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -95,7 +96,7 @@
 
         <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="103dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 tools:visibility="visible">
@@ -104,13 +105,13 @@
                     android:text="@string/mathematics"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button_math" android:textSize="8sp"/>
+                    android:id="@+id/button_math" android:textSize="10sp" app:backgroundTint="@color/iconYellow"/>
 
             <Button
                     android:text="@string/literacy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button_literacy" android:textSize="9sp"/>
+                    android:id="@+id/button_literacy" android:textSize="10sp" app:backgroundTint="@color/iconYellow"/>
 
         </LinearLayout>
 
@@ -226,7 +227,7 @@
                         android:id="@+id/button5"
                         android:layout_width="58dp"
                         android:layout_height="wrap_content"
-                        android:text="Button"/>
+                        android:text="Button" app:backgroundTint="@color/iconYellow"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

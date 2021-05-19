@@ -9,23 +9,42 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroundNormal">#EFF0F1</color>
 
-<!-- Pergament (Lesson Quest Log):-->
-    <color name="backgroundAlternate">#FDBC4B</color>
-    <color name="backgroundAlternateShading">#F67400</color>
+<!--    Breeze Light-->
+<!--        Grayscale-->
+    <color name="shadeBlack">#232629</color>     "textOnBackgroundColor"/"textOnForegroundColor"
+    <color name="charcoalGray">#31363B</color>
+    <color name="burntCharcoal">#3B4045</color>
+    <color name="iconGray">#4D4D4D</color>
+    <color name="coastalFog">#7F8C8D</color>
+    <color name="lazyGray">#AFB0B3</color>
+    <color name="alternateGray">#BDC3C7</color>  "notDoneColor"
+    <color name="cardboardGray">#EFF0F1</color>  "backgroundNormal"
+    <color name="paperWhite">#FCFCFC</color>
+<!--    Blues-->
+    <color name="abyssBlue">#2980B9</color>
+    <color name="decoBlue">#1E92FF</color>
+    <color name="iconBlue">#1D99F3</color>
+    <color name="plasmaBlue">#3DAEE9</color>    "buttonColor"/"buttonHover"
+    <color name="hyperBlue">#3DAEE6</color>
+    <color name="hoverBlue">#93CEE9</color>     "doneColor"
+<!--    Reds-->
+    <color name="iconRed">#DA4453</color>       "negativeColor"
+    <color name="pimpinella">#E74C3C</color>
+<!--    Orange-->
+    <color name="bewareOrange">#F67400</color>  "backgroundAlternateShading"
+<!--    Yellow-->
+    <color name="iconYellow">#FDBC4B</color>    "backgroundAlternate"
+<!--    Greens-->
+    <color name="nobleFir">#27AE60</color>      "doneColor"
+    <color name="iconGreen">#2ECC71</color>
+<!--    Breeze Light end-->
 
-    <color name="buttonColor">#3DAEE9</color>
-    <color name="buttonHover">#93CEE9</color>
 
-<!--textOnBackgroundColor-->
-<color name="textOnBackgroundColor">#232629</color>
-<color name="textOnForegroundColor">#232629</color>
-
-<color name="doneColor">#93CEE9</color>
-<color name="notDoneColor">#BDC3C7</color>
-
-<color name="positiveColor">#27AE60</color>
-<color name="negativeColor">#DA4453</color>
+<!--    Darker versions (For status Bar)-->
+    <color name="darkIconRed">#C1313F</color>
+    <color name="darkBewareOrange">#D65933</color>
+    <color name="darkIconYellow">#D8992D</color>
+    <color name="darkIconGreen">#199C51</color>
 
 </resources>

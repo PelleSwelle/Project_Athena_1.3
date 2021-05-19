@@ -1,5 +1,6 @@
 package com.example.projectathena13.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import com.example.projectathena13.MainActivity;
 import com.example.projectathena13.R;
 
 import java.util.ArrayList;
@@ -52,6 +54,14 @@ public class FragmentLanguages extends Fragment
                 }
             });
         }
+        //set Status and Navigation bar color
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Action bar
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
 
         return root;
     }

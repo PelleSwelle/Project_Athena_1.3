@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/CircleImageView" />
+            app:shapeAppearanceOverlay="@style/circleImageView" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,18 +100,18 @@
         android:orientation="horizontal" />
 
     <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/positiveColor" />
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/iconGreen"/>
 
     <TextView
-        android:id="@+id/textView"
-        android:text="@string/goals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@color/positiveColor"/>
+            android:id="@+id/textView"
+            android:text="@string/goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/iconGreen"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -160,7 +160,7 @@
         android:id="@id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/positiveColor" />
+        android:background="@color/plasmaBlue" />
 
     <!--    this is going to be a recyclerView when populating programmatically -->
     <TextView
@@ -168,7 +168,7 @@
         android:layout_height="33dp"
         android:text="@string/recentActivities"
         android:textSize="18sp"
-        android:textColor="@color/positiveColor"/>
+        android:textColor="@color/plasmaBlue"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -176,48 +176,48 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#D7D8D8"
-            android:clickable="true"
-            android:drawableRight="@drawable/icon_rightarrow"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_vertical"
-            android:text="Percentages - Substitution into algebraic expressions" />
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/alternateGray"
+                android:clickable="true"
+                android:drawableRight="@drawable/icon_rightarrow"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical"
+                android:text="Percentages - Substitution into algebraic expressions"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#868787"
-            android:clickable="true"
-            android:drawableRight="@drawable/icon_rightarrow"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_vertical"
-            android:text="Percentages - Directed numbers: addition and subtraction" />
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/cardboardGray"
+                android:clickable="true"
+                android:drawableRight="@drawable/icon_rightarrow"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical"
+                android:text="Percentages - Directed numbers: addition and subtraction"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#D7D8D8"
-            android:clickable="true"
-            android:drawableRight="@drawable/icon_rightarrow"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_vertical"
-            android:text="Algebraic expressions - Expanding and simplifying algebraic expressions" />
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/alternateGray"
+                android:clickable="true"
+                android:drawableRight="@drawable/icon_rightarrow"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical"
+                android:text="Algebraic expressions - Expanding and simplifying algebraic expressions"/>
     </LinearLayout>
 
     <View
-        android:id="@id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/positiveColor" />
+            android:id="@id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/iconYellow"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/latest_achievements"
-        android:textSize="18sp"
-        android:textColor="@color/positiveColor"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_achievements"
+            android:textSize="18sp"
+            android:textColor="@color/iconYellow"/>
 
     <LinearLayout
         android:layout_width="match_parent"
