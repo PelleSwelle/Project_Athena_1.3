@@ -128,7 +128,7 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
 
         for (View view:_convertView.getTouchables()) {
             int min = 1;
-            int max = 1000;
+            int max = 700;
             int i1 = r.nextInt(max - min + 1) + min;
             view.setTranslationX(i1);
         }
