@@ -10,7 +10,6 @@ import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 import androidx.appcompat.widget.PopupMenu;
-import com.example.projectathena13.ui.FragmentHome;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
@@ -32,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     EditText et_userName;
     EditText et_password;
     Button bt_enter;
+    public static FloatingActionButton fab;
+    public static Toolbar toolbar;
 
     public static User user;
 
@@ -43,13 +44,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
+        toolbar = findViewById(R.id.toolbar);
         NavController navController1 = new NavController(this);
 
         navigationView = findViewById(R.id.nav_view);
         nav_header = navigationView.getHeaderView(0);
+
 
         PopupMenu popMenu = new PopupMenu(MainActivity.this, fab);
 
@@ -83,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 popMenu.show();
             }
         });
+        fab.setVisibility(View.INVISIBLE);
+        toolbar.setVisibility(View.INVISIBLE);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
@@ -90,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,
                 R.id.nav_dashboard,
                 R.id.nav_city,
                 R.id.nav_todo,
@@ -135,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_settings);
 
             case R.id.action_logOut:
-                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_home);
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_login);
         }
         Log.d("TAG", "onOptionsItemSelected: " + item.toString());
         return super.onOptionsItemSelected(item);

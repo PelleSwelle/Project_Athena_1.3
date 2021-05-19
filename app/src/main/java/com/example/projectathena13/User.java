@@ -3,9 +3,12 @@ package com.example.projectathena13;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+
+import static android.content.ContentValues.TAG;
 
 public class User {
     private Image image;
@@ -33,16 +36,21 @@ public class User {
     public int getMathPoints() {
         return mathPoints;
     }
+
     public void addMath(int points) {
         this.mathPoints += points;
+        Log.d(TAG, "addMath: added " + mathPoints);
+        Log.d(TAG, "Total Math points" + getMathPoints());
     }
 
     // LITERACY POINTS
     public int getLiteracyPoints() {
         return literacyPoints;
     }
-    public void addliteracy(int points) {
+    public void addLiteracy(int points) {
         this.literacyPoints += points;
+        Log.d(TAG, "addLiteracy: added " + literacyPoints);
+        Log.d(TAG, "Total literacy points" + getLiteracyPoints());
     }
 
     // ACHIEVEMENTS

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Lesson {
     private String title;
-
+    private String description;
     private ArrayList<String> materials;
     private boolean isFinished;
 
@@ -18,17 +18,25 @@ public class Lesson {
     public Lesson(String _title) {
         this.title = _title;
         this.isFinished = false;
-
-        this.addMaterials(_title, "material 1", "material 2", "homework");
-    }
-
-    public void addMaterials(String lesson, String title1, String title2, String title3) {
+        this.description = String.valueOf(R.string.lorem_ipsum);
+        // every lesson instantiates with 2 materials and 1 homework
         this.materials = new ArrayList<String>();
-
-        this.materials.add(lesson + "-" + title1);
-        this.materials.add(lesson + "-" + title2);
-        this.materials.add(lesson + "-" + title3);
+        this.materials.add("material 1");
+        this.materials.add("material 2");
+        this.materials.add("Homework");
     }
+
+    public Lesson(String title, String description) {
+        this.title = title;
+        this.isFinished = false;
+        this.description = description;
+
+        this.materials = new ArrayList<String>();
+        this.materials.add("material 1");
+        this.materials.add("material 2");
+        this.materials.add("Homework");
+    }
+
 
     // TITLE
     public String getTitle() {
@@ -46,6 +54,14 @@ public class Lesson {
 
     public void setMaterials(ArrayList materials) {
         this.materials = materials;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     // FINISHED
