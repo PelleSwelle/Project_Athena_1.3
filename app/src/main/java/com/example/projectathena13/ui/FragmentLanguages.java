@@ -60,6 +60,15 @@ public class FragmentLanguages extends Fragment {
             });
         }
 
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.iconGray);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.coastalFog);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        //((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
+
         return root;
     }
 }

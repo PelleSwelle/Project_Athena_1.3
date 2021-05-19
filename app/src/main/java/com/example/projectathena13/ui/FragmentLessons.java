@@ -1,5 +1,6 @@
 package com.example.projectathena13.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -133,6 +134,16 @@ public class FragmentLessons extends Fragment {
         });
 
         PieChart _piechart = (PieChart) root.findViewById(R.id.piechart);
+
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
+
         return root;
     }
 }
