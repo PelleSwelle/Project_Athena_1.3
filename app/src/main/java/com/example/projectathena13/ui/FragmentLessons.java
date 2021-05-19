@@ -71,7 +71,7 @@ public class FragmentLessons extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView textView = (TextView) view;
-                textView.setTextColor(getResources().getColor(R.color.doneColor));
+                textView.setTextColor(getResources().getColor(R.color.hoverBlue));
                 user.addLiteracy(2);
             }
         });
