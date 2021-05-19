@@ -43,15 +43,6 @@ public class FragmentChooseGrade extends Fragment
         butt9 = root.findViewById(R.id.lowersecondary_grade9);
         butt10 = root.findViewById(R.id.lowersecondary_grade10);
 
-        //set Status- & Navigation bar colors
-        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
-        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
-        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
-        //Toolbar & Navigation drawer Header
-        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
-        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
-        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
-
         // getting the buttons
         butt7 = root.findViewById(R.id.lowersecondary_grade7);
         butt8 = root.findViewById(R.id.lowersecondary_grade8);
@@ -64,6 +55,14 @@ public class FragmentChooseGrade extends Fragment
         setButtons(butt7, butt8, butt9);
         setButtons(butt10, butt11, butt12);
 
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
 
         return root;
     }

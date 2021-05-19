@@ -36,7 +36,7 @@
 <!--    Yellow-->
     <color name="iconYellow">#FDBC4B</color>    "backgroundAlternate"
 <!--    Greens-->
-    <color name="nobleFir">#27AE60</color>      "doneColor"
+    <color name="nobleFir">#27AE60</color>      "doneColor"/"positiveColor"
     <color name="iconGreen">#2ECC71</color>
 <!--    Breeze Light end-->
 
