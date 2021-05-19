@@ -1,5 +1,6 @@
 package com.example.projectathena13.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,6 +59,15 @@ public class FragmentHome extends Fragment
                 }
             }
         });
+
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+       // ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
 
         return root;
     }

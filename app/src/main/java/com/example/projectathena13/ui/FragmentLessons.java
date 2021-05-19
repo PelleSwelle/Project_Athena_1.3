@@ -75,7 +75,7 @@ public class FragmentLessons extends Fragment {
                 popWindow.getContentView().findViewById(R.id.tv_material1).setOnClickListener(new View.OnClickListener() {
 //                    @Override
                     public void onClick(View v) {
-                        tv_material1.setTextColor(getResources().getColor(R.color.doneColor));
+                        tv_material1.setTextColor(getResources().getColor(R.color.nobleFir));
 
                         // TODO this should happen when all are clicked.
                         // TODO find out if getting math or literacy points.
@@ -85,14 +85,14 @@ public class FragmentLessons extends Fragment {
                 popWindow.getContentView().findViewById(R.id.tv_material2).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        tv_material2.setTextColor(getResources().getColor(R.color.doneColor));
+                        tv_material2.setTextColor(getResources().getColor(R.color.nobleFir));
                         Log.d(TAG, "onClick: material 2");
                     }
                 });
                 popWindow.getContentView().findViewById(R.id.tv_homework).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        tv_homeWork.setTextColor(getResources().getColor(R.color.doneColor));
+                        tv_homeWork.setTextColor(getResources().getColor(R.color.nobleFir));
                         Log.d(TAG, "onClick: homework");
                     }
                 });

@@ -15,34 +15,34 @@
         tools:visibility="visible">
 
         <Button
-            android:text="Profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/profile_button" />
+                android:text="Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_button" app:backgroundTint="@color/coastalFog"/>
 
         <Button
-            android:text="Grade and Language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/gradeandlanguage_button" />
+                android:text="Grade and Language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gradeandlanguage_button" app:backgroundTint="@color/coastalFog"/>
 
         <Button
-            android:text="Visuals"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/visuals_button" />
+                android:text="Visuals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/visuals_button" app:backgroundTint="@color/coastalFog"/>
 
         <Button
-            android:text="Support"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/support_button" />
+                android:text="Support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/support_button" app:backgroundTint="@color/coastalFog"/>
 
         <Button
-            android:text="About"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/about_button" />
+                android:text="About"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/about_button" app:backgroundTint="@color/coastalFog"/>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,7 +89,7 @@
                     android:id="@+id/divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/positiveColor"/>
+                    android:background="@color/coastalFog"/>
 
             <LinearLayout
                     android:orientation="horizontal"
@@ -97,25 +97,30 @@
                     android:layout_height="133dp">
 
                 <ImageView
-                        android:layout_width="166dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:srcCompat="@tools:sample/avatars"
                         android:id="@+id/imageView4"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" android:layout_marginLeft="10dp" android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp" android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"/>
 
                 <Button
                         android:text="Change Image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button10"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" app:backgroundTint="@color/coastalFog"
+                        android:layout_marginLeft="10dp" android:layout_marginStart="10dp"
+                        android:layout_marginRight="20dp" android:layout_marginEnd="20dp"
+                        android:layout_marginTop="0dp"/>
             </LinearLayout>
 
             <View
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/positiveColor"/>
+                    android:background="@color/coastalFog"/>
 
             <TextView
                     android:text="@string/prompt_password"
@@ -161,32 +166,32 @@
                         android:text="@string/english"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button11"/>
+                        android:id="@+id/button11" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/arabic"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button12"/>
+                        android:id="@+id/button12" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/greek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button13"/>
+                        android:id="@+id/button13" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/turkish"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button14"/>
+                        android:id="@+id/button14" app:backgroundTint="@color/coastalFog"/>
             </LinearLayout>
 
             <View
                     android:id="@+id/divider3"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/positiveColor"/>
+                    android:background="@color/coastalFog"/>
 
             <TextView
                     android:text="Grades"
@@ -203,37 +208,37 @@
                         android:text="@string/grade7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button15"/>
+                        android:id="@+id/button15" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/grade8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button16"/>
+                        android:id="@+id/button16" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/grade9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button17"/>
+                        android:id="@+id/button17" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/grade10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button18"/>
+                        android:id="@+id/button18" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/grade11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button19"/>
+                        android:id="@+id/button19" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="@string/grade12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button20"/>
+                        android:id="@+id/button20" app:backgroundTint="@color/coastalFog"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -282,14 +287,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button21"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" app:backgroundTint="@color/coastalFog"/>
 
                 <Button
                         android:text="Dark Theme"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/button22"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" app:backgroundTint="@color/coastalFog"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -323,7 +328,7 @@
                     android:id="@+id/divider4"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/positiveColor"/>
+                    android:background="@color/coastalFog"/>
 
             <TextView
                     android:text="Lorem ipsum"
@@ -343,7 +348,7 @@
                     android:id="@+id/divider5"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/positiveColor"/>
+                    android:background="@color/coastalFog"/>
 
             <TextView
                     android:text="Lorem ipsum"
@@ -378,10 +383,10 @@
                 android:textSize="30sp" />
 
             <View
-                android:id="@+id/divider6"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/positiveColor" />
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/coastalFog"/>
 
             <TextView
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec justo mollis, sodales ex sed, rutrum libero. Proin eget venenatis arcu. Morbi non efficitur sem, sed gravida enim. Vivamus enim enim, sollicitudin sit amet porttitor porta, iaculis at nunc. Etiam non dolor nec est ultricies sagittis in eget erat. In pulvinar massa in turpis scelerisque interdum. Phasellus facilisis orci rhoncus blandit laoreet.  Pellentesque quis mollis neque. Morbi aliquet scelerisque libero non tempus. Vestibulum eu malesuada dui, non placerat eros. In pharetra ullamcorper iaculis. Duis consequat eget turpis sed efficitur. Phasellus a efficitur quam. Morbi facilisis ac turpis at imperdiet. Curabitur vel est et lorem pulvinar pharetra. In hac habitasse platea dictumst.  Aenean sed eros nibh. Aliquam quis leo et sapien euismod tempus at ullamcorper dolor. Nam eget ante nec arcu sagittis pellentesque. Aenean sodales elit tellus, ac porta lacus molestie at. Sed dapibus sollicitudin interdum. Aliquam sit amet pretium mi. Donec vulputate sodales nulla. Pellentesque quis nunc ultricies, egestas velit at, pulvinar ipsum. Sed sit amet enim sed sem pellentesque tristique in quis felis. Etiam congue diam eget nisl elementum feugiat ac eu tortor. Sed et nulla tincidunt, ornare dolor eget, porttitor tortor. Phasellus nec vestibulum velit. Sed ut porttitor turpis. Quisque posuere tortor eu sem pulvinar, quis accumsan nulla tempus."

@@ -1,16 +1,14 @@
 package com.example.projectathena13;
 
 import android.app.Activity;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.Menu;
+import android.view.*;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.appcompat.widget.PopupMenu;
 import com.example.projectathena13.ui.FragmentHome;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -149,4 +147,28 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void updateStatusBarColor(String color){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor(color));
+        }
+    }
+    public void updateNavBarColor(String color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setNavigationBarColor(Color.parseColor(color));
+        }
+    }
+    public void updateActionBarColor(String color) {
+        View toolBar = findViewById(R.id.toolbar);
+        toolBar.setBackgroundColor(Color.parseColor(color));
+    }
+    public void updateNavHeaderColor(String color) {
+        LinearLayout navHeader = findViewById(R.id.nav_header);
+        navHeader.setBackgroundColor(Color.parseColor(color));
+    }
+
 }

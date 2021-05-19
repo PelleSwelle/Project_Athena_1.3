@@ -21,9 +21,10 @@
     <string name="usernamePlaceholder">[Username]</string>
     <string name="resourceAmountPlaceholder">99+</string>
     <string name="b_enterCity">Go to your city</string>
-    <string name="latest_achievements">Latest Achievements</string>
+    <string name="latest_achievements">Latest Achievements:</string>
+    <string name="all_achievements">All achievements:</string>
     <string name="achievementNamePlaceholder">[Achievement]</string>
-    <string name="recent_activity">Recent Activity</string>
+    <string name="recent_activity">Recent Activity:</string>
     <string name="menu_dashboard">Dashboard</string>
     <string name="placeholderEmail">fakeuser@fakemail.poop</string>
     <string name="chooseLanguageString">Choose your language</string>
@@ -43,10 +44,9 @@
     <string name="grade12">12th grade</string>
     <string name="languages">Languages</string>
     <string name="passwordPlaceholder">[PASSWORD]</string>
-    <string name="prompt_password">Change Passwrod</string>
+    <string name="prompt_password">Change Password</string>
     <string name="prompt_email">Change Email</string>
     <string name="settings">Settings</string>
-    <string name="recent_achievements">Recent Achievements</string>
     <string name="downloading_materials1">downloading materials 1</string>
     <string name="enter_password">Enter Password</string>
     <string name="enter_username">Enter Username</string>
