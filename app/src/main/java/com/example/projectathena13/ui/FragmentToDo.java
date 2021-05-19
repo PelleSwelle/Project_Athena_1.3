@@ -26,7 +26,7 @@ public class FragmentToDo extends Fragment
             @Override
             public void onClick(View v)
             {
-                Navigation.findNavController(root).navigate(R.id.action_nav_dashboard_to_nav_todo);
+                Navigation.findNavController(root).navigate(R.id.nav_todo);
             }
         });
 //        final TextView textView = root.findViewById(R.id.text_todo);

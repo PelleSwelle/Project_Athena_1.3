@@ -14,6 +14,7 @@ import org.eazegraph.lib.models.PieModel;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Random;
 
 import static android.content.ContentValues.TAG;
 
@@ -23,6 +24,7 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
     private ArrayList<Lesson> lessons;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
+    Random r = new Random();
 
     Context mContext;
 
@@ -112,6 +114,12 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
         viewHolder.pieChart.startAnimation();
         viewHolder.tv_title.setText(lesson.getTitle());
 
+        for (View view:_convertView.getTouchables()) {
+            int min = 1;
+            int max = 1000;
+            int i1 = r.nextInt(max - min + 1) + min;
+            view.setTranslationX(i1);
+        }
 
 
         return _convertView;

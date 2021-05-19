@@ -6,24 +6,26 @@
     android:background="@color/seeThrough"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-            <TextView android:id="@+id/tv_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/module_name_placeholder"
-                    android:textAllCaps="true"
-            />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/module_name_placeholder"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
 
-            <org.eazegraph.lib.charts.PieChart
-                    android:id="@+id/piechart"
-                    android:layout_width="@dimen/module_pieChart_size"
-                    android:layout_height="@dimen/module_pieChart_size"
-                    app:egInnerPaddingColor="@color/seeThrough"
-            />
+        <org.eazegraph.lib.charts.PieChart
+            android:id="@+id/piechart"
+            android:layout_width="@dimen/module_pieChart_size"
+            android:layout_height="@dimen/module_pieChart_size"
+            android:layout_gravity="center"
+            app:egInnerPaddingColor="@color/seeThrough" />
 
     </LinearLayout>
 
