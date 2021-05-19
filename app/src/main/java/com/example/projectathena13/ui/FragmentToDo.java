@@ -1,5 +1,6 @@
 package com.example.projectathena13.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import com.example.projectathena13.MainActivity;
 import com.example.projectathena13.R;
 
 public class FragmentToDo extends Fragment
@@ -37,6 +39,16 @@ public class FragmentToDo extends Fragment
 //                textView.setText(s);
 //            }
 //        });
+
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.darkIconGreen);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.iconGreen);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
+
         return root;
     }
 }

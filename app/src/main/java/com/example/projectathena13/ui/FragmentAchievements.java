@@ -1,5 +1,6 @@
 package com.example.projectathena13.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import com.example.projectathena13.MainActivity;
 import com.example.projectathena13.R;
 
 import java.util.ArrayList;
@@ -113,7 +115,14 @@ public class FragmentAchievements extends Fragment
             }
         });
 
-
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.darkIconYellow);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.iconYellow);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
 
         return root;
     }

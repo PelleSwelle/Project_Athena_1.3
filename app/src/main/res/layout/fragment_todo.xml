@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
     android:layout_height="match_parent" android:orientation="vertical">
 
     <TextView
@@ -10,7 +10,7 @@
     <View android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/backgroundNormal"
+        android:background="@color/cardboardGray"
         />
     <LinearLayout
         android:orientation="vertical"
@@ -38,17 +38,17 @@
             android:ems="10"
             android:id="@+id/short3"/>
         <Button
-            android:text="+ Add new goal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/newgoal_short"
-        />
+                android:text="+ Add new goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newgoal_short"
+                app:backgroundTint="@color/iconGreen"/>
     </LinearLayout>
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/positiveColor"
+        android:background="@color/iconGreen"
     />
     <TextView
         android:id="@+id/longterm_title"
@@ -60,7 +60,7 @@
     <View android:id="@+id/divider3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/positiveColor"
+        android:background="@color/iconGreen"
     />
 
     <LinearLayout android:id="@+id/goals_long"
@@ -92,9 +92,9 @@
             android:ems="10"
         />
         <Button android:id="@+id/newgoal_long"
-            android:text="+ Add new goal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-        />
+                android:text="+ Add new goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/iconGreen"/>
     </LinearLayout>
 </LinearLayout>
