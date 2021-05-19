@@ -1,6 +1,9 @@
 package com.example.projectathena13.ui;
 
 import android.app.Activity;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,8 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import com.example.projectathena13.MainActivity;

@@ -7,7 +7,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
 import androidx.navigation.Navigation;
+
+import com.example.projectathena13.MainActivity;
+
+import androidx.navigation.Navigation;
+
 import com.example.projectathena13.R;
 
 import java.util.ArrayList;
@@ -36,11 +42,27 @@ public class FragmentChooseGrade extends Fragment
         butt9 = root.findViewById(R.id.lowersecondary_grade9);
         butt10 = root.findViewById(R.id.lowersecondary_grade10);
 
+        //set Status- & Navigation bar colors
+        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
+        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+        //Toolbar & Navigation drawer Header
+        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
+        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
+
+        // getting the buttons
+        butt7 = root.findViewById(R.id.lowersecondary_grade7);
+        butt8 = root.findViewById(R.id.lowersecondary_grade8);
+        butt9 = root.findViewById(R.id.lowersecondary_grade9);
+        butt10 = root.findViewById(R.id.lowersecondary_grade10);
+
         butt11 = root.findViewById(R.id.uppersecondary_grade11);
         butt12 = root.findViewById(R.id.uppersecondary_grade12);
 
         setButtons(butt7, butt8, butt9);
         setButtons(butt10, butt11, butt12);
+
 
         return root;
     }

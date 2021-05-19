@@ -71,7 +71,9 @@ public class FragmentLessons extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView textView = (TextView) view;
+
                 textView.setTextColor(getResources().getColor(R.color.hoverBlue));
+
                 user.addLiteracy(2);
             }
         });
@@ -87,6 +89,33 @@ public class FragmentLessons extends Fragment {
 
                 popWindow.showAtLocation(lv_pieChart, Gravity.CENTER, 0, 0);
                 popWindow.setBackgroundDrawable(popWindow.getBackground());
+
+                popWindow.getContentView().findViewById(R.id.tv_material1).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+                    public void onClick(View v) {
+                        tv_material1.setTextColor(getResources().getColor(R.color.nobleFir));
+
+                        // TODO this should happen when all are clicked.
+                        // TODO find out if getting math or literacy points.
+//                        user.addliteracy();
+                    }
+                });
+                popWindow.getContentView().findViewById(R.id.tv_material2).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_material2.setTextColor(getResources().getColor(R.color.nobleFir));
+                        Log.d(TAG, "onClick: material 2");
+                    }
+                });
+                popWindow.getContentView().findViewById(R.id.tv_homework).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tv_homeWork.setTextColor(getResources().getColor(R.color.nobleFir));
+                        Log.d(TAG, "onClick: homework");
+                    }
+                });
+
+
 
                 // set title of lesson
                 TextView tv_lessonTitle = popWindow.getContentView().findViewById(R.id.tv_lessonTitle);
