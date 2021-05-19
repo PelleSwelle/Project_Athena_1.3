@@ -26,6 +26,9 @@ public class FragmentLessons extends Fragment {
     LinearLayout linearLayout;
     ListView pieList;
     private Adapter_Lessons adapter;
+    private ArrayAdapter materialsAdapter;
+
+
 
     Context context;
 
@@ -40,7 +43,6 @@ public class FragmentLessons extends Fragment {
 //        
         context = this.context;
 
-
         View root = inflater.inflate(R.layout.fragment_lessons, container, false);
 
 
@@ -48,18 +50,31 @@ public class FragmentLessons extends Fragment {
         imgView = root.findViewById(R.id.piechart);
         lv_pieChart = root.findViewById(R.id.lv_lessons);
 
-        // TODO make dynamic depending on which module you press.
         lessons = Adapter_Modules.lessonsToBeSent;
         adapter = new Adapter_Lessons(lessons, getContext());
 
         popWindow = new PopupWindow(inflater.inflate(R.layout.lesson_popup, null, false), 1200, 2000, true);
-        TextView tv_material1 = popWindow.getContentView().findViewById(R.id.tv_material1);
-        TextView tv_material2 = popWindow.getContentView().findViewById(R.id.tv_material2);
-        TextView tv_homeWork = popWindow.getContentView().findViewById(R.id.tv_homework);
+        ListView lv_materials = popWindow.getContentView().findViewById(R.id.lv_materials);
 
-        ImageView iv_exit = root.findViewById(R.id.exitCross);
+        // TODO get materials from lessons
 
 
+        ArrayList materials = new ArrayList<String>();
+        materials.add("material 1");
+        materials.add("material 2");
+        materials.add("Homework");
+
+        materialsAdapter = new ArrayAdapter<String>(root.getContext(), R.layout.material_item, materials);
+        lv_materials.setAdapter(materialsAdapter);
+
+        lv_materials.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView textView = (TextView) view;
+                textView.setTextColor(getResources().getColor(R.color.doneColor));
+                user.addLiteracy(2);
+            }
+        });
 
 
         lv_pieChart.setAdapter(adapter);
@@ -72,6 +87,7 @@ public class FragmentLessons extends Fragment {
 
                 popWindow.showAtLocation(lv_pieChart, Gravity.CENTER, 0, 0);
                 popWindow.setBackgroundDrawable(popWindow.getBackground());
+<<<<<<< HEAD
                 popWindow.getContentView().findViewById(R.id.tv_material1).setOnClickListener(new View.OnClickListener() {
 //                    @Override
                     public void onClick(View v) {
@@ -97,7 +113,22 @@ public class FragmentLessons extends Fragment {
                     }
                 });
 
+=======
+>>>>>>> point_system
 
+                // set title of lesson
+                TextView tv_lessonTitle = popWindow.getContentView().findViewById(R.id.tv_lessonTitle);
+                tv_lessonTitle.setText(adapter.getItem(position).getTitle());
+
+                // set description for lesson
+                TextView tv_lessonDescription = popWindow.getContentView().findViewById(R.id.tv_lessonDescription);
+                tv_lessonDescription.setText(adapter.getItem(position).getDescription());
+//
+//                        // TODO this should happen when all are clicked.
+//                        // TODO find out if getting math or literacy points.
+////                        user.addliteracy();
+//                    }
+//                });
             }
         });
 

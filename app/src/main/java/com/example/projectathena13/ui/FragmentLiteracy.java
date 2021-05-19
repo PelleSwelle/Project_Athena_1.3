@@ -30,12 +30,12 @@ public class FragmentLiteracy extends Fragment
     ListView lv_literacyModules;
 
     ArrayList<Module> modules;
-    ArrayList<Lesson> module1Lessons;
-    ArrayList<Lesson> module2Lessons;
-    ArrayList<Lesson> module3Lessons;
-    ArrayList<Lesson> module4Lessons;
-    ArrayList<Lesson> module5Lessons;
-    ArrayList<Lesson> module6Lessons;
+    ArrayList<Lesson> essayWritingLessons;
+    ArrayList<Lesson> speechLessons;
+    ArrayList<Lesson> punctuationLessons;
+    ArrayList<Lesson> advancedSpeechLessons;
+    ArrayList<Lesson> spellingLessons;
+    ArrayList<Lesson> sentenceImprovementLessons;
 
 
 
@@ -46,59 +46,59 @@ public class FragmentLiteracy extends Fragment
         modules = new ArrayList<Module>();
 
         // MODULE 1
-            module1Lessons = new ArrayList<Lesson>();
-            module1Lessons.add(new Lesson("Spelling – Mnemonics"));
-            module1Lessons.add(new Lesson("Essay Writing 2"));
-            module1Lessons.add(new Lesson("Phrases"));
-            module1Lessons.add(new Lesson("Clauses"));
-            module1Lessons.add(new Lesson("Prepositions"));
-            module1Lessons.add(new Lesson("Conjunctions"));
-        modules.add(new Module("module1", module1Lessons));
+            essayWritingLessons = new ArrayList<Lesson>();
+            essayWritingLessons.add(new Lesson("Spelling – Mnemonics"));
+            essayWritingLessons.add(new Lesson("Essay Writing 2"));
+            essayWritingLessons.add(new Lesson("Phrases"));
+            essayWritingLessons.add(new Lesson("Clauses"));
+            essayWritingLessons.add(new Lesson("Prepositions"));
+            essayWritingLessons.add(new Lesson("Conjunctions"));
+        modules.add(new Module("Essay Writing", essayWritingLessons));
 
         // MODULE 2
-            module2Lessons = new ArrayList<Lesson>();
-            module2Lessons.add(new Lesson("Conjunctions – Sentences"));
-            module2Lessons.add(new Lesson("Sentence Improvement"));
-            module2Lessons.add(new Lesson("Sentence Construction"));
-            module2Lessons.add(new Lesson("Commas 2"));
-            module2Lessons.add(new Lesson("Quotation Marks"));
-        modules.add(new Module("module2", module2Lessons));
+            speechLessons = new ArrayList<Lesson>();
+            speechLessons.add(new Lesson("Conjunctions – Sentences"));
+            speechLessons.add(new Lesson("Sentence Improvement"));
+            speechLessons.add(new Lesson("Sentence Construction"));
+            speechLessons.add(new Lesson("Commas 2"));
+            speechLessons.add(new Lesson("Quotation Marks"));
+        modules.add(new Module("Speech", speechLessons));
 
         // MODULE 3
-            module3Lessons = new ArrayList<Lesson>();
-            module3Lessons.add(new Lesson("Colons and Semi-Colons"));
-            module3Lessons.add(new Lesson("Apostrophe – Possession"));
-            module3Lessons.add(new Lesson("Punctuation – Various"));
-            module3Lessons.add(new Lesson("Interjections"));
-            module3Lessons.add(new Lesson("Clauses"));
-        modules.add(new Module("module3", module3Lessons));
+            punctuationLessons = new ArrayList<Lesson>();
+            punctuationLessons.add(new Lesson("Colons and Semi-Colons"));
+            punctuationLessons.add(new Lesson("Apostrophe – Possession"));
+            punctuationLessons.add(new Lesson("Punctuation – Various"));
+            punctuationLessons.add(new Lesson("Interjections"));
+            punctuationLessons.add(new Lesson("Clauses"));
+        modules.add(new Module("Punctuation", punctuationLessons));
 
         // MODULE 4
-            module4Lessons = new ArrayList<Lesson>();
-            module4Lessons.add(new Lesson("Subject and Predicate"));
-            module4Lessons.add(new Lesson("Modal Verbs"));
-            module4Lessons.add(new Lesson("Adjectives"));
-            module4Lessons.add(new Lesson("Adverbs"));
-            module4Lessons.add(new Lesson("First and second conditionals"));
-        modules.add(new Module("module4", module4Lessons));
+            advancedSpeechLessons = new ArrayList<Lesson>();
+            advancedSpeechLessons.add(new Lesson("Subject and Predicate"));
+            advancedSpeechLessons.add(new Lesson("Modal Verbs"));
+            advancedSpeechLessons.add(new Lesson("Adjectives"));
+            advancedSpeechLessons.add(new Lesson("Adverbs"));
+            advancedSpeechLessons.add(new Lesson("First and second conditionals"));
+        modules.add(new Module("Advanced Speech", advancedSpeechLessons));
 
         // MODULE 5
-            module5Lessons = new ArrayList<Lesson>();
-            module5Lessons.add(new Lesson("Modals of obligation"));
-            module5Lessons.add(new Lesson("Imperatives"));
-            module5Lessons.add(new Lesson("Spelling"));
-            module5Lessons.add(new Lesson("Prefixes"));
-            module5Lessons.add(new Lesson("Suffixes"));
-        modules.add(new Module("module5", module5Lessons));
+            spellingLessons = new ArrayList<Lesson>();
+            spellingLessons.add(new Lesson("Modals of obligation"));
+            spellingLessons.add(new Lesson("Imperatives"));
+            spellingLessons.add(new Lesson("Spelling"));
+            spellingLessons.add(new Lesson("Prefixes"));
+            spellingLessons.add(new Lesson("Suffixes"));
+        modules.add(new Module("Spelling", spellingLessons));
 
         // MODULE 6
-            module6Lessons = new ArrayList<Lesson>();
-            module6Lessons.add(new Lesson("Advanced Dictionary Use"));
-            module6Lessons.add(new Lesson("Conjunctions – Sentences"));
-            module6Lessons.add(new Lesson("Sentence Improvement"));
-            module6Lessons.add(new Lesson("Sentence Construction"));
-            module6Lessons.add(new Lesson("Verbs – Tense"));
-        modules.add(new Module("module6", module6Lessons));
+            sentenceImprovementLessons = new ArrayList<Lesson>();
+            sentenceImprovementLessons.add(new Lesson("Advanced Dictionary Use"));
+            sentenceImprovementLessons.add(new Lesson("Conjunctions – Sentences"));
+            sentenceImprovementLessons.add(new Lesson("Sentence Improvement"));
+            sentenceImprovementLessons.add(new Lesson("Sentence Construction"));
+            sentenceImprovementLessons.add(new Lesson("Verbs – Tense"));
+        modules.add(new Module("Sentence Improvement", sentenceImprovementLessons));
 
         View root = inflater.inflate(R.layout.fragment_literacy, container, false);
 

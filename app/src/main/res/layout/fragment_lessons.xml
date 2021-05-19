@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_mapliteracy"
-    tools:context=".ui.viewmodels.lesson.LessonsFragment">
+    tools:context=".ui.FragmentLessons">
 <!--        TODO make background change according to module-->
 
     <ListView
