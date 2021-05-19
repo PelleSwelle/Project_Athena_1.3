@@ -135,14 +135,17 @@ public class FragmentLessons extends Fragment {
 
         PieChart _piechart = (PieChart) root.findViewById(R.id.piechart);
 
-        //set Status- & Navigation bar colors
-        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
-        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
-        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
-        //Toolbar & Navigation drawer Header
-        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
-        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
-        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
+
+        // We don't change the colors for the lesson fragment, we let it inherit the color of the subject it is accessed from
+
+//        //set Status- & Navigation bar colors
+//        @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.abyssBlue);
+//        ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
+//        ((MainActivity)getActivity()).updateNavBarColor(systemBar);
+//        //Toolbar & Navigation drawer Header
+//        @SuppressLint("ResourceType") String toolBar = getResources().getString(R.color.plasmaBlue);
+//        ((MainActivity)getActivity()).updateActionBarColor(toolBar);
+//        ((MainActivity)getActivity()).updateNavHeaderColor(toolBar);
 
         return root;
     }
