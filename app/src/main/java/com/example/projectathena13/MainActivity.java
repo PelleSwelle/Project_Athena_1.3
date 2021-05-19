@@ -137,9 +137,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_settings);
+                break;
 
             case R.id.action_logOut:
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_login);
+                break;
         }
         Log.d("TAG", "onOptionsItemSelected: " + item.toString());
         return super.onOptionsItemSelected(item);
