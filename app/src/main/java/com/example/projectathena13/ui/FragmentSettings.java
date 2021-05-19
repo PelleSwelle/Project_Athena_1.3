@@ -6,13 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import com.example.projectathena13.MainActivity;
 import com.example.projectathena13.R;
 
-public class SettingsFragment extends Fragment {
+import static com.example.projectathena13.MainActivity.user;
+
+public class FragmentSettings extends Fragment {
 
     Button profileButton;
     Button gradeandlanguageButton;
@@ -26,12 +29,23 @@ public class SettingsFragment extends Fragment {
     ConstraintLayout supportConstraint;
     ConstraintLayout aboutConstraint;
 
+    TextView tv_username;
+    TextView tv_mail;
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
 
         View root = inflater.inflate(R.layout.fragment_settings, container, false);
+
+        tv_username = root.findViewById(R.id.tv_username);
+        tv_mail = root.findViewById(R.id.tv_mail);
+
+        if (user != null) {
+            tv_username.setText(user.getName());
+            tv_mail.setText(user.getMail());
+        }
 
         profileButton = root.findViewById(R.id.profile_button);
         gradeandlanguageButton = root.findViewById(R.id.gradeandlanguage_button);
@@ -48,6 +62,12 @@ public class SettingsFragment extends Fragment {
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                profileButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
+                gradeandlanguageButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                visualsButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                supportButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                aboutButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+
                 if (profileConstraint.getVisibility() == View.GONE)
                 {
                     profileConstraint.setVisibility(View.VISIBLE);
@@ -62,7 +82,11 @@ public class SettingsFragment extends Fragment {
         gradeandlanguageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (gradeandlanguageConstraint.getVisibility() == View.GONE)
+                profileButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                gradeandlanguageButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
+                visualsButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                supportButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                aboutButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));if (gradeandlanguageConstraint.getVisibility() == View.GONE)
                 {
                     profileConstraint.setVisibility(View.GONE);
                     gradeandlanguageConstraint.setVisibility(View.VISIBLE);
@@ -76,7 +100,11 @@ public class SettingsFragment extends Fragment {
         visualsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (visualsConstraint.getVisibility() == View.GONE)
+                profileButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                gradeandlanguageButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                visualsButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
+                supportButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                aboutButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));if (visualsConstraint.getVisibility() == View.GONE)
                 {
                     profileConstraint.setVisibility(View.GONE);
                     gradeandlanguageConstraint.setVisibility(View.GONE);
@@ -90,7 +118,11 @@ public class SettingsFragment extends Fragment {
         supportButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (supportConstraint.getVisibility() == View.GONE)
+                profileButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                gradeandlanguageButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                visualsButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                supportButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
+                aboutButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));if (supportConstraint.getVisibility() == View.GONE)
                 {
                     profileConstraint.setVisibility(View.GONE);
                     gradeandlanguageConstraint.setVisibility(View.GONE);
@@ -104,6 +136,11 @@ public class SettingsFragment extends Fragment {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                profileButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                gradeandlanguageButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                visualsButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                supportButton.setBackgroundColor(getResources().getColor(R.color.coastalFog));
+                aboutButton.setBackgroundColor(getResources().getColor(R.color.nobleFir));
                 if (aboutConstraint.getVisibility() == View.GONE)
                 {
                     profileConstraint.setVisibility(View.GONE);

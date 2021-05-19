@@ -14,6 +14,7 @@ import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static android.content.ContentValues.TAG;
 
@@ -23,6 +24,8 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
     private ArrayList<Module> modules;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
+
+    Random r = new Random();
 
     Context mContext;
     public static ArrayList lessonsToBeSent;
@@ -80,19 +83,9 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
             result = _convertView;
         }
 
-//        Animation animation = AnimationUtils.loadAnimation(mContext, (_position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
-//        result.startAnimation(animation);
-//        lastPosition = _position;
 
         // TODO color according to whether it is done or not.
 
-//        PieModel donePie = new PieModel(
-//                "Lesson 2", 3,
-//                R.color.notFinished);
-
-//        PieModel notDonePie = new PieModel(
-//                "Lesson 3", 3,
-//                R.color.finished);
 
         for (Lesson _lesson : module.getLessons()) {
             if (_lesson.getFinished()) {
@@ -110,6 +103,7 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
 
         viewHolder.pieChart.startAnimation();
         viewHolder.tv_title.setText(module.getTitle());
+
 
         _convertView.setOnClickListener(new View.OnClickListener() {
             // TODO 2nd of 2 onClicks
@@ -131,6 +125,13 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
                 });
             }
         });
+
+        for (View view:_convertView.getTouchables()) {
+            int min = 1;
+            int max = 1000;
+            int i1 = r.nextInt(max - min + 1) + min;
+            view.setTranslationX(i1);
+        }
         return _convertView;
     }
 }

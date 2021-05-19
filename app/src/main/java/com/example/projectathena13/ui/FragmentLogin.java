@@ -58,6 +58,8 @@ public class FragmentLogin extends Fragment
                     navEmail.setText(user.getMail());
                     Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_chooseGrade);
 
+
+
                 }
             }
         });
