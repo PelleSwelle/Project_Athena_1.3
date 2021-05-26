@@ -14,6 +14,9 @@ could grant the student access to an exam at a recognized learning institution.
 The application is implemented in conjuction with a city-building game, which is, 
 at this point, implemented as a separate application. 
 The same is true for the self-evaluation tests found at the end of each lesson.
+The self evaluation tests are in the form of quizes found at: https://www.quiz-maker.com/QFZ9PJEYP 
+
+Both the main application as well as the city builder game is found as an apk in folder: "Project Athena".
 
 
 ##The material

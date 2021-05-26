@@ -15,7 +15,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:textAlignment="center"
-            android:text="I'm sorry, but the game is in another castle."
+            android:text="The city builder is not implemented in the main application. \n Please open the city builder game through your home screen."
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -23,12 +23,4 @@
             app:layout_constraintTop_toTopOf="parent"
             android:gravity="center_horizontal"/>
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="open city"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_city" app:backgroundTint="@color/burntCharcoal"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
