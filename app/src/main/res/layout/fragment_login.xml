@@ -7,6 +7,7 @@
 
     <TextView
         android:text="Project Athena"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/welcome_title"

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -45,7 +46,7 @@ public class FragmentLogin extends Fragment
         bt_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (et_name != null) {
+                if (et_name.getText() != null) {
                     // create user.
                     user = new User(et_name.getText().toString());
 
@@ -59,6 +60,20 @@ public class FragmentLogin extends Fragment
                     Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_chooseGrade);
 
 
+
+                }
+                else {
+                    // create placeholder user.
+                    user = new User("placeholder user");
+
+                    // update UI
+                    NavigationView navigationView = (NavigationView) MainActivity.navigationView;
+                    View headerView = navigationView.getHeaderView(0);
+                    TextView navUsername = (TextView) headerView.findViewById(R.id.nav_header_username);
+                    navUsername.setText("placeholder user");
+                    TextView navEmail = (TextView) headerView.findViewById(R.id.nav_header_email);
+                    navEmail.setText(user.getMail());
+                    Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_chooseGrade);
 
                 }
             }

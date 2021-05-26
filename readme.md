@@ -20,7 +20,9 @@ Both the main application as well as the city builder game is found as an apk in
 
 
 ##The material
-The learning material, while only implemented as placeholder text 
+The learning material, while only implemented as placeholder text. When clicked, the text changes color to signify 
+that the learning material has been read and finished. At this point, there is not a separate popup for each lesson, 
+but a shared one for the entire module, which is only for placeholder purposes.
 in the current iteration of the application is split into a hierarchy consisting of:
 - Grades
     - Subjects
@@ -35,6 +37,18 @@ as this is best left to professionals in that particular field.
 What the group hopes to accomplish with the application is to provide a platform 
 on which to host the material in a way that is fun and engaging as well as manageable for the student.
 
+## placeholder objects
+The application at this point has many elements with no functionality.
+Known placeholder elements and missing functionality are, and not limited to the following:
+- Dashboard screen has no fuctionality.
+- Settings page is only placeholder elements with no effect outside of the screen.
+- Material fields in each lesson are simply text with no connection to any files.
+- points given for each subject are at the moment the same points. There is no way to achieve math points at the moment. Only literacy points are implemented.
+- Language- and choose grade- screens have no effect on the information being displayed.
+They are only there to simulate the effect of the application once fully implemented.
+The text fields in the settings page cannot be edited.
+- It is not possible to add new short- and long-term goals other than the fields already on screen.
+- City builder game is not implemented in the main application, but as a separate application.
 ##points, achievements and a sense of progression
 Each subject (math and literacy) is associated with one type of points 
 which in turn work as "building materials" in the city building aspect of the application.

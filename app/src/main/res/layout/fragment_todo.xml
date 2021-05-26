@@ -4,7 +4,7 @@
     android:layout_height="match_parent" android:orientation="vertical">
 
     <TextView
-        android:text="To do"
+        android:text="Short term goals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" android:id="@+id/todo_title" android:textSize="30sp"/>
     <View android:id="@+id/divider"
@@ -20,21 +20,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Short term goal"
+            android:text="build a building in the city"
             android:ems="10"
             android:id="@+id/short1"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Short term goal"
+            android:text="finish one literacy test"
             android:ems="10"
             android:id="@+id/short2"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Short term goal"
+            android:text="finish one math module"
             android:ems="10"
             android:id="@+id/short3"/>
         <Button
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Long term goal"
+            android:text="finish a math module"
             android:ems="10"
         />
         <EditText
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Long term goal"
+            android:text="finish a literacy module"
             android:ems="10"
         />
         <EditText
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Long term goal"
+            android:text="unlock 6 buildings"
             android:ems="10"
         />
         <Button android:id="@+id/newgoal_long"
