@@ -2,6 +2,7 @@ package com.example.projectathena13.ui;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import com.example.projectathena13.*;
 import org.eazegraph.lib.charts.PieChart;
 
 import java.util.ArrayList;
+
+import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
 
 public class FragmentLiteracy extends Fragment
 {
@@ -52,6 +55,7 @@ public class FragmentLiteracy extends Fragment
             essayWritingLessons.add(new Lesson("Prepositions"));
             essayWritingLessons.add(new Lesson("Conjunctions"));
         modules.add(new Module("Essay Writing", essayWritingLessons));
+        Log.d(TAG, "onCreateView: Essay writing module instantiated and added.");
 
         // MODULE 2
             speechLessons = new ArrayList<Lesson>();
@@ -61,6 +65,7 @@ public class FragmentLiteracy extends Fragment
             speechLessons.add(new Lesson("Commas 2"));
             speechLessons.add(new Lesson("Quotation Marks"));
         modules.add(new Module("Speech", speechLessons));
+        Log.d(TAG, "onCreateView: Speech module instantiated and added.");
 
         // MODULE 3
             punctuationLessons = new ArrayList<Lesson>();
@@ -70,6 +75,7 @@ public class FragmentLiteracy extends Fragment
             punctuationLessons.add(new Lesson("Interjections"));
             punctuationLessons.add(new Lesson("Clauses"));
         modules.add(new Module("Punctuation", punctuationLessons));
+        Log.d(TAG, "onCreateView: Punctuation module instantiated and added.");
 
         // MODULE 4
             advancedSpeechLessons = new ArrayList<Lesson>();
@@ -79,6 +85,7 @@ public class FragmentLiteracy extends Fragment
             advancedSpeechLessons.add(new Lesson("Adverbs"));
             advancedSpeechLessons.add(new Lesson("First and second conditionals"));
         modules.add(new Module("Advanced Speech", advancedSpeechLessons));
+        Log.d(TAG, "onCreateView: Advanced Speech module instantiated and added.");
 
         // MODULE 5
             spellingLessons = new ArrayList<Lesson>();
@@ -88,6 +95,7 @@ public class FragmentLiteracy extends Fragment
             spellingLessons.add(new Lesson("Prefixes"));
             spellingLessons.add(new Lesson("Suffixes"));
         modules.add(new Module("Spelling", spellingLessons));
+        Log.d(TAG, "onCreateView: Spelling module instantiated and added.");
 
         // MODULE 6
             sentenceImprovementLessons = new ArrayList<Lesson>();
@@ -97,6 +105,7 @@ public class FragmentLiteracy extends Fragment
             sentenceImprovementLessons.add(new Lesson("Sentence Construction"));
             sentenceImprovementLessons.add(new Lesson("Verbs – Tense"));
         modules.add(new Module("Sentence Improvement", sentenceImprovementLessons));
+        Log.d(TAG, "onCreateView: Sentence improvement module instantiated and added.");
 
         View root = inflater.inflate(R.layout.fragment_literacy, container, false);
 

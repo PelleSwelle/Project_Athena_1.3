@@ -1,11 +1,11 @@
 package com.example.projectathena13;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,10 +24,13 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
     private ArrayList<Module> modules;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
+    DisplayMetrics displayMetrics;
 
     Random r = new Random();
 
     Context mContext;
+
+
     public static ArrayList lessonsToBeSent;
 
     // represents the linear layout holding the text- and imageView
@@ -43,11 +46,16 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
 
         this.modules = _modules;
         this.mContext = _context;
+
+        displayMetrics = new DisplayMetrics();
+
+        Log.d(TAG, "Adapter_Modules: ScreenWidth: " + displayMetrics.widthPixels); // this returns 0
     }
 
     // TODO on of 2 onClicks
     public void onClick(View _view) {
     }
+
 
     private int lastPosition = -1;
 
@@ -71,15 +79,15 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
             viewHolder.pieChart = (PieChart) _convertView.findViewById(R.id.piechart);
 
             result = _convertView;
-            Log.d(TAG, "ViewHolder: " + viewHolder.toString());
+//            Log.d(TAG, "ViewHolder: " + viewHolder.toString());
             _convertView.setTag(viewHolder);
-            Log.d(TAG, "convertView.getTag(): " + _convertView.getTag().toString());
+//            Log.d(TAG, "convertView.getTag(): " + _convertView.getTag().toString());
         }
         // if there is one, get the tag
         else {
             viewHolder = (ViewHolder) _convertView.getTag();
-            Log.d(TAG, "viewHolder: " + viewHolder.toString());
-            Log.d(TAG, "_convertView.tag: " + _convertView.getTag().toString());
+//            Log.d(TAG, "viewHolder: " + viewHolder.toString());
+//            Log.d(TAG, "_convertView.tag: " + _convertView.getTag().toString());
             result = _convertView;
         }
 
@@ -101,8 +109,21 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
         viewHolder.pieChart.addPieSlice(
                 new PieModel("Lesson 3", 1, Color.parseColor("#232629")));
 
+        int rand = r.nextInt(500 - 1 + 1) + 1;
+        viewHolder.pieChart.setTranslationX(rand);
+        viewHolder.tv_title.setTranslationX(rand);
         viewHolder.pieChart.startAnimation();
         viewHolder.tv_title.setText(module.getTitle());
+
+        // SET THE X POSITION FOR EACH VIEW.
+//        for (View view:_convertView.getTouchables()) {
+//            int min = 200;
+//            int max = 1000;
+//            int i1 = r.nextInt(max - min + 1) + min;
+//
+//            view.setTranslationX(i1);
+//        }
+
 
 
         _convertView.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +138,7 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
 
                 _view.setOnClickListener(new View.OnClickListener() {
 
+
                     @Override
                     public void onClick(View v) {
                         lessonsToBeSent = module.getLessons();
@@ -126,12 +148,8 @@ public class Adapter_Modules extends ArrayAdapter<Module> implements View.OnClic
             }
         });
 
-        for (View view:_convertView.getTouchables()) {
-            int min = 1;
-            int max = 700;
-            int i1 = r.nextInt(max - min + 1) + min;
-            view.setTranslationX(i1);
-        }
+
+
         return _convertView;
     }
 }

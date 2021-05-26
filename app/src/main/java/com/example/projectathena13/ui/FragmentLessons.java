@@ -40,7 +40,6 @@ public class FragmentLessons extends Fragment {
 
     ArrayList<Lesson> lessons;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        
         context = this.context;
@@ -70,8 +69,6 @@ public class FragmentLessons extends Fragment {
         materialsAdapter = new ArrayAdapter<String>(root.getContext(), R.layout.material_item, materials);
         lv_materials.setAdapter(materialsAdapter);
 
-
-
         lv_materials.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -94,33 +91,6 @@ public class FragmentLessons extends Fragment {
                 popWindow.showAtLocation(lv_pieChart, Gravity.CENTER, 0, 0);
                 popWindow.setBackgroundDrawable(popWindow.getBackground());
 
-//                popWindow.getContentView().findViewById(R.id.tv_material1).setOnClickListener(new View.OnClickListener() {
-////                    @Override
-//                    public void onClick(View v) {
-//                        tv_material1.setTextColor(getResources().getColor(R.color.nobleFir));
-//
-//                        // TODO this should happen when all are clicked.
-//                        // TODO find out if getting math or literacy points.
-////                        user.addliteracy();
-//                    }
-//                });
-//                popWindow.getContentView().findViewById(R.id.tv_material2).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        tv_material2.setTextColor(getResources().getColor(R.color.nobleFir));
-//                        Log.d(TAG, "onClick: material 2");
-//                    }
-//                });
-//                popWindow.getContentView().findViewById(R.id.tv_homework).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        tv_homeWork.setTextColor(getResources().getColor(R.color.nobleFir));
-//                        Log.d(TAG, "onClick: homework");
-//                    }
-//                });
-
-
-
                 // set title of lesson
                 TextView tv_lessonTitle = popWindow.getContentView().findViewById(R.id.tv_lessonTitle);
                 tv_lessonTitle.setText(adapter.getItem(position).getTitle());
@@ -129,12 +99,6 @@ public class FragmentLessons extends Fragment {
                 TextView tv_lessonDescription = popWindow.getContentView().findViewById(R.id.tv_lessonDescription);
                 tv_lessonDescription.setText(adapter.getItem(position).getDescription());
                 iv_exitCross = popWindow.getContentView().findViewById(R.id.iv_cross);
-//
-//                        // TODO this should happen when all are clicked.
-//                        // TODO find out if getting math or literacy points.
-////                        user.addliteracy();
-//                    }
-//                });
 
                 iv_exitCross.setOnClickListener(new View.OnClickListener() {
                     @Override

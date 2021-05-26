@@ -2,9 +2,11 @@ package com.example.projectathena13.ui;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,6 +14,8 @@ import com.example.projectathena13.*;
 import org.eazegraph.lib.charts.PieChart;
 
 import java.util.ArrayList;
+
+import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
 
 public class FragmentMathematics extends Fragment
 {
@@ -37,15 +41,13 @@ public class FragmentMathematics extends Fragment
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-//        mathematicsViewModel = new ViewModelProvider(this).get(MathematicsViewModel.class);
-
-
         modules = new ArrayList<Module>();
 
         // SELF ASSESSMENT
             selfAssessmentLessons = new ArrayList<Lesson>();
             selfAssessmentLessons.add(new Lesson("Self Assessment – Year 7"));
         modules.add(new Module("Self-assessment", selfAssessmentLessons));
+        Log.d(TAG, "onCreateView: self-assessment module instantiated and added.");
 
         // MULITPLICATION
             multiplicationLessons = new ArrayList<Lesson>();
@@ -56,6 +58,7 @@ public class FragmentMathematics extends Fragment
             multiplicationLessons.add(new Lesson("Multiplication 3",
                     "Multiplying 4-digit numbers by 3-digit numbers"));
         modules.add(new Module("Multiplication", multiplicationLessons));
+        Log.d(TAG, "onCreateView: Multiplication module instantiated and added.");
 
         // DIVISION / REPEAT SUBTRACTION
             divisionRepeatSubtractionLessons = new ArrayList<Lesson>();
@@ -70,6 +73,7 @@ public class FragmentMathematics extends Fragment
             divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 9","Repeated subtraction with divisors greater than 50 with dividends of thousands and some remainders"));
             divisionRepeatSubtractionLessons.add(new Lesson("Division / Repeat Subtraction 10","Using divide, multiply and subtraction in the bring down method"));
         modules.add(new Module("Division/repeat subtraction", divisionRepeatSubtractionLessons));
+        Log.d(TAG, "onCreateView: Division / repeat subtraction module instantiated and added.");
 
         // DECIMALS
             decimalsLessons = new ArrayList<Lesson>();
@@ -83,6 +87,7 @@ public class FragmentMathematics extends Fragment
             decimalsLessons.add(new Lesson("Decimals 8", "Dividing decimal fractions by whole numbers"));
             decimalsLessons.add(new Lesson("Decimals 9", "Dividing numbers by a decimal fraction"));
         modules.add(new Module("Decimals", decimalsLessons));
+        Log.d(TAG, "onCreateView: Decimals module instantiated and added.");
 
         // PERCENTAGES
             percentagesLessons = new ArrayList<Lesson>();
@@ -91,6 +96,7 @@ public class FragmentMathematics extends Fragment
             percentagesLessons.add(new Lesson("Percentages 3","One quantity as a percentage of another"));
             percentagesLessons.add(new Lesson("Percentages 4","Calculating Percentages and Fractions of Quantities"));
         modules.add(new Module("Percentages", percentagesLessons));
+        Log.d(TAG, "onCreateView: Percentages module instantiated and added.");
 
         // FRACTIONS
             fractionsLessons = new ArrayList<Lesson>();
@@ -108,6 +114,7 @@ public class FragmentMathematics extends Fragment
             fractionsLessons.add(new Lesson("Fractions 12","Multiplying fractions"));
             fractionsLessons.add(new Lesson("Fractions 13","Multiplying mixed numbers (mixed numerals)"));
         modules.add(new Module("Fractions", fractionsLessons));
+        Log.d(TAG, "onCreateView: Fractions module instantiated and added.");
 
         View root = inflater.inflate(R.layout.fragment_mathematics, container, false);
 
@@ -132,6 +139,9 @@ public class FragmentMathematics extends Fragment
 //            _piechart.setLayoutParams(params);
 //        }
 
+
+
+
         //set Status- & Navigation bar colors
         @SuppressLint("ResourceType") String systemBar = getResources().getString(R.color.darkIconRed);
         ((MainActivity)getActivity()).updateStatusBarColor(systemBar);
@@ -148,11 +158,11 @@ public class FragmentMathematics extends Fragment
 
 
     // this is for programmaticilly setting the margin of the viewholders, when moving down the screen.
-    public static void setMargins (View _view, int _left, int _top, int _right, int _bottom) {
-        if (_view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
-            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) _view.getLayoutParams();
-            params.setMargins(_left, _top, _right, _bottom);
-            _view.requestLayout();
-        }
-    }
+//    public static void setMargins (View _view, int _left, int _top, int _right, int _bottom) {
+//        if (_view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+//            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) _view.getLayoutParams();
+//            params.setMargins(_left, _top, _right, _bottom);
+//            _view.requestLayout();
+//        }
+//    }
 }

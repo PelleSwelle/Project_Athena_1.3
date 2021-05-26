@@ -7,6 +7,7 @@
     tools:context=".ui.FragmentAchievements"
     android:orientation="vertical">
 
+
     <TextView android:id="@+id/tv_recentAchievements"
               android:text="@string/latest_achievements"
               android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                     android:layout_height="110dp"
                     app:srcCompat="@drawable/icon_achievement"
                     android:id="@+id/imageView9"/>
+
 
             <TextView
                     android:text="@string/achievementNamePlaceholder"

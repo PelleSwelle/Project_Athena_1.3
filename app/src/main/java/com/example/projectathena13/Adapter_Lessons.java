@@ -2,6 +2,7 @@ package com.example.projectathena13;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
     private ArrayList<Lesson> lessons;
     int doneColor = Color.parseColor("#3daee9");
     int notDoneColor = Color.parseColor("#3daee9");
+    DisplayMetrics displayMetrics;
     Random r = new Random();
 
     Context mContext;
@@ -73,35 +75,14 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
             result = _convertView;
             Log.d(TAG, "ViewHolder: " + viewHolder.toString());
             _convertView.setTag(viewHolder);
-            Log.d(TAG, "convertView.getTag(): " + _convertView.getTag().toString());
         }
         // if there is one, get the tag
         else
         {
             viewHolder = (ViewHolder) _convertView.getTag();
-            Log.d(TAG, "viewHolder: " + viewHolder.toString());
-            Log.d(TAG, "_convertView.tag: " + _convertView.getTag().toString());
             result = _convertView;
         }
 
-//        Animation animation = AnimationUtils.loadAnimation(mContext, (_position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
-//        result.startAnimation(animation);
-//        lastPosition = _position;
-
-        // TODO color according to whether it is done or not.
-
-//        PieModel donePie = new PieModel(
-//                "Lesson 2", 3,
-//                R.color.notFinished);
-
-//        PieModel notDonePie = new PieModel(
-//                "Lesson 3", 3,
-//                R.color.finished);
-
-//        for (Object _material : lesson.getMaterials())
-//        {
-//
-//        }
         viewHolder.pieChart.addPieSlice(new PieModel("something", 1, Color.parseColor("#232629")));
 
         viewHolder.pieChart.addPieSlice(
@@ -111,15 +92,14 @@ public class Adapter_Lessons extends ArrayAdapter<Lesson> implements View.OnClic
                 new PieModel("Lesson 3", 1,
                 Color.parseColor("#232629")));
 
+        int rand = r.nextInt(500 - 1 + 1) + 1;
+        viewHolder.pieChart.setTranslationX(rand);
+        viewHolder.tv_title.setTranslationX(rand);
         viewHolder.pieChart.startAnimation();
         viewHolder.tv_title.setText(lesson.getTitle());
 
-        for (View view:_convertView.getTouchables()) {
-            int min = 1;
-            int max = 700;
-            int i1 = r.nextInt(max - min + 1) + min;
-            view.setTranslationX(i1);
-        }
+
+
 
 
         return _convertView;

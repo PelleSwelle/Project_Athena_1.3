@@ -39,6 +39,7 @@ public class Lesson {
     }
 
 
+
     // TITLE
     public String getTitle() {
         return this.title;
